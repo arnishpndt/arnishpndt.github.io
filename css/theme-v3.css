@@ -1,0 +1,46 @@
+/* Version 3: all-black backgrounds, white and gold type. Loaded after styles.css. */
+
+html { color-scheme: dark; }
+
+:root,
+.section--dark,
+.dark-card--ink,
+.quiz {
+  --bg: #0a0a0a;
+  --card: #141414;
+  --tint: #141414;
+  --ink: #ffffff;
+  --soft: #ffffff;
+  --muted: #f1f1f1;
+  --faint: #e0b93a;
+  --line: rgba(224, 185, 58, 0.28);
+  --gold: #e0b93a;
+  --gold-deep: #e0b93a;
+}
+
+.section--dark, .dark-card--ink { background: var(--bg); color: var(--soft); }
+.dark-card.dark-card--ink { background: var(--bg); border: 1px solid var(--line); }
+.hero-card { background: var(--tint); }
+.v-card { background: var(--card); }
+.quiz { background: var(--card); }
+.portrait { background: #1c1c1c; }
+.portrait-tag { background: #0a0a0a; color: #fff; border: 1px solid var(--line); }
+
+.nav-shell { background: rgba(10, 10, 10, 0.86); }
+@media (max-width: 920px) { .site-nav { background: #0a0a0a; } }
+
+.kicker, .hero-eyebrow, .pillar-icon, .option-tag, .tile-num, .stake-label { color: var(--gold); }
+.h1 .tone, .h2 .tone, .big-quote span { color: var(--gold); }
+.step, .pillar, .quote { border-top-color: var(--gold); }
+.price-card--featured { border-color: var(--gold); }
+.dash-list li::before { color: var(--gold); }
+
+.btn--dark, .btn--gold { background: var(--gold); color: #111; }
+.btn--dark:hover, .btn--gold:hover { background: #ecc850; }
+.btn--dark .btn-arrow, .btn--gold .btn-arrow { background: #111; color: var(--gold); }
+.btn--ghost:hover { color: #111; }
+.stage-dot, .price-badge, .done-mark, .quiz-done .done-mark { background: var(--gold); color: #111; }
+.explore-go { background: var(--gold); color: #111; }
+::selection { color: #111; }
+
+.brand img, .portrait-mark, .foot-brand img { content: url("../assets/logo-mark-white.png"); }

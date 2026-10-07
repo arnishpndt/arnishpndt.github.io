@@ -1,0 +1,30 @@
+/* Version 2: all-white backgrounds, black and gold type, no grey. Loaded after styles.css. */
+
+:root,
+.section--dark,
+.dark-card--ink,
+.quiz {
+  --bg: #ffffff;
+  --card: #ffffff;
+  --tint: #ffffff;
+  --ink: #111111;
+  --soft: #111111;
+  --muted: #111111;
+  --faint: #b8901c;
+  --line: rgba(184, 144, 28, 0.35);
+  --gold: #d4ac2b;
+  --gold-deep: #b8901c;
+}
+
+.section--dark, .dark-card--ink { background: #fff; color: var(--soft); }
+.dark-card.dark-card--ink { background: #fff; border: 1px solid var(--line); }
+.hero-card { background: #fff; border: 1px solid var(--line); }
+.portrait { background: #fff; border: 1px solid var(--line); }
+
+.kicker, .hero-eyebrow, .pillar-icon, .option-tag, .tile-num, .stake-label { color: var(--gold-deep); }
+.h1 .tone, .h2 .tone, .big-quote span { color: var(--gold-deep); }
+.step, .pillar, .quote { border-top-color: var(--gold); }
+.price-card--featured { border-color: var(--gold); }
+.dash-list li::before { color: var(--gold-deep); }
+
+.foot-brand img { content: url("../assets/logo-mark.png"); }
