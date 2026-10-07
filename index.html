@@ -13,13 +13,14 @@
   <meta property="og:image" content="assets/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="assets/favicon.png?v=theme5" type="image/png">
+  <link rel="icon" href="assets/favicon.png?v=lay1" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=theme5">
-  <link rel="stylesheet" href="css/themes.css?v=theme5">
-  <script>(function(d){d.classList.add('js');try{var q=new URLSearchParams(location.search).get('theme'),t=q||localStorage.getItem('ss-theme');if(q)localStorage.setItem('ss-theme',q);if(/^(light|dark|stone|midnight|apple|tesla|google|robbins|shetty|comeback|brendon)$/.test(t))d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
+  <link rel="stylesheet" href="css/styles.css?v=lay1">
+  <link rel="stylesheet" href="css/themes.css?v=lay1">
+  <link rel="stylesheet" href="css/layouts.css?v=lay1">
+  <script>(function(d){d.classList.add('js');function pick(k,a,ok){try{var q=new URLSearchParams(location.search).get(k),v=q||localStorage.getItem('ss-'+k);if(q)localStorage.setItem('ss-'+k,q);if(ok.test(v))d.setAttribute(a,v)}catch(e){}}pick('theme','data-theme',/^(light|dark|stone|midnight|apple|tesla|google|robbins|shetty|comeback|brendon)$/);pick('layout','data-layout',/^(centered|overlap|bold|mirror)$/)})(document.documentElement)</script>
 </head>
 <body>
 
@@ -28,7 +29,7 @@
   <header class="site-head" id="siteHead">
     <div class="nav-shell">
       <a class="brand" href="index.html" aria-label="Still Standing — home">
-        <img src="assets/logo-mark.png?v=theme5" width="34" height="34" alt="">
+        <img src="assets/logo-mark.png?v=lay1" width="34" height="34" alt="">
         <span>Still Standing</span>
       </a>
       <nav class="site-nav" id="siteNav" aria-label="Primary">
@@ -39,27 +40,39 @@
       </nav>
       <div class="head-actions">
         <div class="theme-pick">
+          <button class="theme-btn" type="button" id="layoutBtn" aria-haspopup="true" aria-expanded="false" aria-controls="layoutMenu" aria-label="Layout">
+            <span class="layout-ico" aria-hidden="true"></span><span class="theme-label">Layout</span><span class="theme-caret" aria-hidden="true">&#9662;</span>
+          </button>
+          <div class="theme-menu" id="layoutMenu" role="menu" aria-label="Layout" hidden>
+            <button type="button" role="menuitemradio" aria-checked="true" data-set="standard"><span class="lo lo--standard" aria-hidden="true"></span>1 &middot; Standard</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="centered"><span class="lo lo--centered" aria-hidden="true"></span>2 &middot; Centered</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="overlap"><span class="lo lo--overlap" aria-hidden="true"></span>3 &middot; Overlap</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="bold"><span class="lo lo--bold" aria-hidden="true"></span>4 &middot; Bold</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="mirror"><span class="lo lo--mirror" aria-hidden="true"></span>5 &middot; Mirror</button>
+          </div>
+        </div>
+        <div class="theme-pick">
           <button class="theme-btn" type="button" id="themeBtn" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu" aria-label="Appearance">
             <span class="theme-ico" aria-hidden="true"></span><span class="theme-label">Appearance</span><span class="theme-caret" aria-hidden="true">&#9662;</span>
           </button>
           <div class="theme-menu" id="themeMenu" role="menu" aria-label="Appearance" hidden>
             <p class="theme-group" aria-hidden="true">Still Standing</p>
-            <button type="button" role="menuitemradio" aria-checked="true" data-theme-set="classic"><span class="sw sw--classic" aria-hidden="true"></span>Classic</button>
-            <button type="button" role="menuitemradio" aria-checked="false" data-theme-set="light"><span class="sw sw--light" aria-hidden="true"></span>Light</button>
-            <button type="button" role="menuitemradio" aria-checked="false" data-theme-set="dark"><span class="sw sw--dark" aria-hidden="true"></span>Dark</button>
-            <button type="button" role="menuitemradio" aria-checked="false" data-theme-set="stone"><span class="sw sw--stone" aria-hidden="true"></span>Stone</button>
-            <button type="button" role="menuitemradio" aria-checked="false" data-theme-set="midnight"><span class="sw sw--midnight" aria-hidden="true"></span>Midnight</button>
+            <button type="button" role="menuitemradio" aria-checked="true" data-set="classic"><span class="sw sw--classic" aria-hidden="true"></span>Classic</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="light"><span class="sw sw--light" aria-hidden="true"></span>Light</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="dark"><span class="sw sw--dark" aria-hidden="true"></span>Dark</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="stone"><span class="sw sw--stone" aria-hidden="true"></span>Stone</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="midnight"><span class="sw sw--midnight" aria-hidden="true"></span>Midnight</button>
             <hr>
             <p class="theme-group" aria-hidden="true">Brands</p>
-            <button type="button" role="menuitemradio" aria-checked="false" data-theme-set="apple"><span class="sw sw--apple" aria-hidden="true"></span>Apple</button>
-            <button type="button" role="menuitemradio" aria-checked="false" data-theme-set="tesla"><span class="sw sw--tesla" aria-hidden="true"></span>Tesla</button>
-            <button type="button" role="menuitemradio" aria-checked="false" data-theme-set="google"><span class="sw sw--google" aria-hidden="true"></span>Google</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="apple"><span class="sw sw--apple" aria-hidden="true"></span>Apple</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="tesla"><span class="sw sw--tesla" aria-hidden="true"></span>Tesla</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="google"><span class="sw sw--google" aria-hidden="true"></span>Google</button>
             <hr>
             <p class="theme-group" aria-hidden="true">Coaching sites</p>
-            <button type="button" role="menuitemradio" aria-checked="false" data-theme-set="robbins"><span class="sw sw--robbins" aria-hidden="true"></span>Tony Robbins</button>
-            <button type="button" role="menuitemradio" aria-checked="false" data-theme-set="shetty"><span class="sw sw--shetty" aria-hidden="true"></span>Jay Shetty</button>
-            <button type="button" role="menuitemradio" aria-checked="false" data-theme-set="comeback"><span class="sw sw--comeback" aria-hidden="true"></span>I Am A Comeback</button>
-            <button type="button" role="menuitemradio" aria-checked="false" data-theme-set="brendon"><span class="sw sw--brendon" aria-hidden="true"></span>Brendon Burchard</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="robbins"><span class="sw sw--robbins" aria-hidden="true"></span>Tony Robbins</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="shetty"><span class="sw sw--shetty" aria-hidden="true"></span>Jay Shetty</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="comeback"><span class="sw sw--comeback" aria-hidden="true"></span>I Am A Comeback</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-set="brendon"><span class="sw sw--brendon" aria-hidden="true"></span>Brendon Burchard</button>
           </div>
         </div>
         <button class="nav-btn" type="button" id="navBtn" aria-expanded="false" aria-controls="siteNav">Menu</button>
@@ -85,7 +98,7 @@
             <p class="micro">Free. Private. No judgment.</p>
           </div>
           <figure class="portrait">
-            <img class="portrait-mark" src="assets/logo-mark.png?v=theme5" alt="">
+            <img class="portrait-mark" src="assets/logo-mark.png?v=lay1" alt="">
             <figcaption class="portrait-tag"><strong>Jamie</strong>Founder &amp; coach</figcaption>
           </figure>
         </div>
@@ -245,7 +258,7 @@
     <div class="wrap">
       <div class="foot-grid">
         <div class="foot-brand">
-          <img src="assets/logo-mark-white.png?v=theme5" width="88" height="88" alt="Still Standing">
+          <img src="assets/logo-mark-white.png?v=lay1" width="88" height="88" alt="Still Standing">
           <p>The answer is you.</p>
         </div>
         <div>
@@ -273,6 +286,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=theme5" defer></script>
+  <script src="js/main.js?v=lay1" defer></script>
 </body>
 </html>

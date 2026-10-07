@@ -33,40 +33,52 @@
     reveals.forEach(function (el) { el.classList.add("in"); });
   }
 
-  var themeBtn = document.getElementById("themeBtn");
-  var themeMenu = document.getElementById("themeMenu");
-  if (themeBtn && themeMenu) {
-    var root = document.documentElement;
-    var items = themeMenu.querySelectorAll("[data-theme-set]");
+  var root = document.documentElement;
+  var pickers = [];
+  function setupPicker(btnId, menuId, key, fallback) {
+    var btn = document.getElementById(btnId);
+    var menu = document.getElementById(menuId);
+    if (!btn || !menu) return;
+    var attr = "data-" + key;
+    var items = menu.querySelectorAll("[data-set]");
     var sync = function () {
-      var cur = root.getAttribute("data-theme") || "classic";
-      items.forEach(function (b) { b.setAttribute("aria-checked", b.getAttribute("data-theme-set") === cur ? "true" : "false"); });
+      var cur = root.getAttribute(attr) || fallback;
+      items.forEach(function (b) { b.setAttribute("aria-checked", b.getAttribute("data-set") === cur ? "true" : "false"); });
     };
-    var closeMenu = function () {
-      themeMenu.hidden = true;
-      themeBtn.setAttribute("aria-expanded", "false");
+    var close = function () {
+      menu.hidden = true;
+      btn.setAttribute("aria-expanded", "false");
     };
+    pickers.push({ btn: btn, menu: menu, close: close });
     sync();
-    themeBtn.addEventListener("click", function (e) {
+    btn.addEventListener("click", function (e) {
       e.stopPropagation();
-      var open = themeMenu.hidden;
-      themeMenu.hidden = !open;
-      themeBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      var open = menu.hidden;
+      pickers.forEach(function (p) { p.close(); });
+      menu.hidden = !open;
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
     });
     items.forEach(function (b) {
       b.addEventListener("click", function () {
-        var t = b.getAttribute("data-theme-set");
-        if (t === "classic") root.removeAttribute("data-theme");
-        else root.setAttribute("data-theme", t);
-        try { localStorage.setItem("ss-theme", t); } catch (err) {}
+        var v = b.getAttribute("data-set");
+        if (v === fallback) root.removeAttribute(attr);
+        else root.setAttribute(attr, v);
+        try { localStorage.setItem("ss-" + key, v); } catch (err) {}
         sync();
-        closeMenu();
-        themeBtn.focus();
+        close();
+        btn.focus();
       });
     });
-    document.addEventListener("click", function (e) { if (!themeMenu.hidden && !themeMenu.contains(e.target)) closeMenu(); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !themeMenu.hidden) { closeMenu(); themeBtn.focus(); } });
   }
+  setupPicker("layoutBtn", "layoutMenu", "layout", "standard");
+  setupPicker("themeBtn", "themeMenu", "theme", "classic");
+  document.addEventListener("click", function (e) {
+    pickers.forEach(function (p) { if (!p.menu.hidden && !p.menu.contains(e.target)) p.close(); });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return;
+    pickers.forEach(function (p) { if (!p.menu.hidden) { p.close(); p.btn.focus(); } });
+  });
 
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();

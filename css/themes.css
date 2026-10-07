@@ -283,6 +283,21 @@
   background: linear-gradient(90deg, currentColor 50%, transparent 50%);
 }
 .theme-caret { font-size: 0.7rem; opacity: 0.7; }
+.layout-ico {
+  width: 0.95rem;
+  height: 0.95rem;
+  background:
+    linear-gradient(currentColor, currentColor) 0 0 / 45% 45% no-repeat,
+    linear-gradient(currentColor, currentColor) 100% 0 / 45% 45% no-repeat,
+    linear-gradient(currentColor, currentColor) 0 100% / 100% 45% no-repeat;
+  border-radius: 2px;
+}
+.lo { width: 1.5rem; height: 1.1rem; flex-shrink: 0; border-radius: 3px; border: 1.5px solid currentColor; opacity: 0.85; }
+.lo--standard { background: linear-gradient(90deg, currentColor 0 45%, transparent 45%) 3px 3px / calc(100% - 6px) 3px no-repeat; }
+.lo--centered { background: linear-gradient(currentColor, currentColor) center 3px / 50% 3px no-repeat, linear-gradient(currentColor, currentColor) center 8px / 70% 2px no-repeat; }
+.lo--overlap { background: linear-gradient(currentColor, currentColor) 2px 2px / 55% 55% no-repeat, linear-gradient(color-mix(in srgb, currentColor 45%, transparent), color-mix(in srgb, currentColor 45%, transparent)) right 2px bottom 2px / 55% 55% no-repeat; }
+.lo--bold { background: linear-gradient(currentColor, currentColor) 2px 2px / calc(100% - 4px) 55% no-repeat; }
+.lo--mirror { background: linear-gradient(90deg, transparent 55%, currentColor 55%) 3px 3px / calc(100% - 6px) 3px no-repeat; }
 .theme-menu {
   position: absolute;
   top: calc(100% + 0.6rem);
@@ -329,5 +344,7 @@
 .theme-group { padding: 0.45rem 0.75rem 0.2rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 .theme-menu hr { border: 0; border-top: 1px solid var(--line); margin: 0.3rem 0.4rem; }
 
-@media (max-width: 1100px) { .theme-label, .theme-caret { display: none; } .theme-btn { padding: 0.6rem; } }
+@media (max-width: 1240px) { .theme-label, .theme-caret { display: none; } .theme-btn { padding: 0.6rem; } }
+.head-actions { gap: 0.35rem; }
+@media (max-width: 440px) { .brand span { display: none; } }
 @media (max-width: 480px) { .theme-btn { padding: 0.5rem; } }
