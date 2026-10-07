@@ -379,7 +379,48 @@ section { scroll-margin-top: 6rem; }
   .section-head--split .lead { padding-bottom: 0.4rem; }
 }
 
-.section--tint { background: var(--tint); border-block: 1px solid var(--line); }
+.section--tint { background: var(--tint); }
+
+/* Inverted bands: components read the same variables, so they flip automatically */
+.section--dark, .dark-card--ink {
+  --bg: #0d0f11;
+  --card: #16191c;
+  --tint: #1c2024;
+  --ink: #ffffff;
+  --soft: #d0d3d7;
+  --muted: #9ba1a8;
+  --faint: #737a82;
+  --line: rgba(255, 255, 255, 0.1);
+  --gold-deep: #e0b93a;
+  background: var(--bg);
+  color: var(--soft);
+}
+.section--dark ::selection, .dark-card--ink ::selection { color: #111416; }
+:is(.section--dark, .dark-card--ink) .btn--dark { background: var(--gold); color: #111416; }
+:is(.section--dark, .dark-card--ink) .btn--dark:hover { background: #e2bb3a; }
+:is(.section--dark, .dark-card--ink) .btn--dark .btn-arrow { background: #111416; color: var(--gold); }
+:is(.section--dark, .dark-card--ink) .btn--ghost:hover { color: #111416; }
+:is(.section--dark, .dark-card--ink) .stage-dot { background: var(--gold); color: #111416; }
+.section--dark .journey-full li { background: var(--card); }
+.section--dark .journey-full li:hover { border-color: rgba(212, 172, 43, 0.45); }
+.section--dark .journey-full li { transition: border-color 0.25s ease; }
+
+/* Light islands inside dark bands */
+.quiz {
+  --card: #faf9f6;
+  --tint: #f6f3ec;
+  --ink: #111416;
+  --soft: #343a40;
+  --muted: #646a72;
+  --line: rgba(17, 20, 22, 0.1);
+  --gold-deep: #a8840f;
+}
+.dark-card.dark-card--ink {
+  border-color: transparent;
+  background:
+    radial-gradient(55% 70% at 100% 0%, rgba(212, 172, 43, 0.16) 0%, transparent 60%),
+    var(--bg);
+}
 
 .journey-layout { display: grid; gap: clamp(2rem, 5vw, 4rem); }
 @media (min-width: 960px) {
@@ -387,7 +428,6 @@ section { scroll-margin-top: 6rem; }
   .journey-intro { position: sticky; top: 7rem; }
 }
 .journey-layout .journey-full { max-width: none; margin: 0; }
-.journey-layout .journey-full li { background: #fff; }
 
 .faq-layout { display: grid; gap: clamp(2rem, 5vw, 4rem); }
 @media (min-width: 960px) {
@@ -845,7 +885,8 @@ section { scroll-margin-top: 6rem; }
 
 /* ---------- Footer ---------- */
 
-.site-foot { padding: var(--sec) 0 2rem; border-top: 1px solid var(--line); margin-top: var(--sec); font-size: 0.92rem; }
+.site-foot { padding: var(--sec) 0 2rem; font-size: 0.92rem; border-top: 1px solid var(--line); }
+#ready { padding-bottom: var(--sec); }
 .foot-grid { display: grid; gap: 2.4rem; }
 @media (min-width: 900px) { .foot-grid { grid-template-columns: 1fr 1.5fr 0.8fr; } }
 .foot-brand img { width: 5.5rem; }
@@ -853,7 +894,7 @@ section { scroll-margin-top: 6rem; }
 .foot-title { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; font-size: 0.85rem; color: var(--ink); margin-bottom: 0.8rem; }
 .foot-list { list-style: none; }
 .foot-list li { padding: 0.3rem 0; color: var(--muted); }
-.foot-list a { color: var(--ink); font-weight: 500; }
+.foot-list a { color: var(--ink); font-weight: 500; text-decoration-color: var(--gold); }
 .foot-legal { margin-top: 2.6rem; padding-top: 1.4rem; border-top: 1px solid var(--line); font-size: 0.8rem; color: var(--faint); display: grid; gap: 0.4rem; }
 
 /* ---------- Motion ---------- */
