@@ -29,11 +29,11 @@
 
 /* ---------- Dark (all black) and Midnight (deep navy): white and gold type ---------- */
 
-:is([data-theme="dark"], [data-theme="midnight"]) { color-scheme: dark; }
-:is([data-theme="dark"], [data-theme="midnight"]),
-:is([data-theme="dark"], [data-theme="midnight"]) .section--dark,
-:is([data-theme="dark"], [data-theme="midnight"]) .dark-card--ink,
-:is([data-theme="dark"], [data-theme="midnight"]) .quiz {
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) { color-scheme: dark; }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]),
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) .section--dark,
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) .dark-card--ink,
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) .quiz {
   --bg: #0a0a0a;
   --card: #141414;
   --tint: #141414;
@@ -45,27 +45,27 @@
   --gold: #e0b93a;
   --gold-deep: #e0b93a;
 }
-:is([data-theme="dark"], [data-theme="midnight"]) .section--dark,
-:is([data-theme="dark"], [data-theme="midnight"]) .dark-card--ink { background: var(--bg); color: var(--soft); }
-:is([data-theme="dark"], [data-theme="midnight"]) .dark-card.dark-card--ink { background: var(--bg); border: 1px solid var(--line); }
-:is([data-theme="dark"], [data-theme="midnight"]) .hero-card { background: var(--tint); }
-:is([data-theme="dark"], [data-theme="midnight"]) :is(.v-card, .quiz) { background: var(--card); }
-:is([data-theme="dark"], [data-theme="midnight"]) .portrait { background: #1c1c1c; }
-:is([data-theme="dark"], [data-theme="midnight"]) .portrait-tag { background: #0a0a0a; color: #fff; border: 1px solid var(--line); }
-:is([data-theme="dark"], [data-theme="midnight"]) .nav-shell { background: rgba(10, 10, 10, 0.86); }
-@media (max-width: 920px) { :is([data-theme="dark"], [data-theme="midnight"]) .site-nav { background: #0a0a0a; } }
-:is([data-theme="dark"], [data-theme="midnight"]) :is(.kicker, .hero-eyebrow, .pillar-icon, .option-tag, .tile-num, .stake-label) { color: var(--gold); }
-:is([data-theme="dark"], [data-theme="midnight"]) :is(.h1 .tone, .h2 .tone, .big-quote span) { color: var(--gold); }
-:is([data-theme="dark"], [data-theme="midnight"]) :is(.step, .pillar, .quote) { border-top-color: var(--gold); }
-:is([data-theme="dark"], [data-theme="midnight"]) .price-card--featured { border-color: var(--gold); }
-:is([data-theme="dark"], [data-theme="midnight"]) .dash-list li::before { color: var(--gold); }
-:is([data-theme="dark"], [data-theme="midnight"]) :is(.btn--dark, .btn--gold) { background: var(--gold); color: #111; }
-:is([data-theme="dark"], [data-theme="midnight"]) :is(.btn--dark, .btn--gold):hover { background: #ecc850; }
-:is([data-theme="dark"], [data-theme="midnight"]) :is(.btn--dark, .btn--gold) .btn-arrow { background: #111; color: var(--gold); }
-:is([data-theme="dark"], [data-theme="midnight"]) .btn--ghost:hover { color: #111; }
-:is([data-theme="dark"], [data-theme="midnight"]) :is(.stage-dot, .price-badge, .quiz-done .done-mark, .explore-go) { background: var(--gold); color: #111; }
-:is([data-theme="dark"], [data-theme="midnight"]) ::selection { color: #111; }
-:is([data-theme="dark"], [data-theme="midnight"]) :is(.brand img, .portrait-mark, .foot-brand img) { content: url("../assets/logo-mark-white.png"); }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) .section--dark,
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) .dark-card--ink { background: var(--bg); color: var(--soft); }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) .dark-card.dark-card--ink { background: var(--bg); border: 1px solid var(--line); }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) .hero-card { background: var(--tint); }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) :is(.v-card, .quiz) { background: var(--card); }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) .portrait { background: #1c1c1c; }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) .portrait-tag { background: #0a0a0a; color: #fff; border: 1px solid var(--line); }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) .nav-shell { background: rgba(10, 10, 10, 0.86); }
+@media (max-width: 920px) { :is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) .site-nav { background: #0a0a0a; } }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) :is(.kicker, .hero-eyebrow, .pillar-icon, .option-tag, .tile-num, .stake-label) { color: var(--gold); }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) :is(.h1 .tone, .h2 .tone, .big-quote span) { color: var(--gold); }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) :is(.step, .pillar, .quote) { border-top-color: var(--gold); }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) .price-card--featured { border-color: var(--gold); }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) .dash-list li::before { color: var(--gold); }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) :is(.btn--dark, .btn--gold) { background: var(--gold); color: #111; }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) :is(.btn--dark, .btn--gold):hover { background: #ecc850; }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) :is(.btn--dark, .btn--gold) .btn-arrow { background: #111; color: var(--gold); }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) .btn--ghost:hover { color: #111; }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) :is(.stage-dot, .price-badge, .quiz-done .done-mark, .explore-go) { background: var(--gold); color: #111; }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) ::selection { color: #111; }
+:is([data-theme="dark"], [data-theme="midnight"], [data-theme="comeback"]) :is(.brand img, .portrait-mark, .foot-brand img) { content: url("../assets/logo-mark-white.png"); }
 
 [data-theme="midnight"],
 [data-theme="midnight"] .section--dark,
@@ -161,18 +161,18 @@
   --gold: #8ab4f8; --gold-deep: #8ab4f8;
 }
 
-:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"]) .v-card { background: #fff; }
-:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"]) .portrait { background: var(--card); }
-:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"]) .quiz { background: #fff; }
-:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"]) .btn--gold { color: #fff; box-shadow: none; }
-:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"]) .btn--gold:hover { background: var(--gold-deep); }
-:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"]) .btn--gold .btn-arrow { background: #fff; color: var(--gold); }
-:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"]) .btn--dark .btn-arrow { color: #fff; }
-:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"]) :is(.price-badge, .quiz-done .done-mark) { color: #fff; }
-:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"]) ::selection { background: var(--gold); color: #fff; }
-:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"]) .opt input:checked + span { background: color-mix(in srgb, var(--gold) 10%, transparent); }
-:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"]) :is(.section--dark, .dark-card--ink) .btn--dark { color: #111; }
-:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"]) :is(.section--dark, .dark-card--ink) .btn--dark:hover { background: var(--gold); filter: brightness(1.1); }
+:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"], [data-theme="shetty"], [data-theme="brendon"]) .v-card { background: #fff; }
+:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"], [data-theme="shetty"], [data-theme="brendon"]) .portrait { background: var(--card); }
+:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"], [data-theme="shetty"], [data-theme="brendon"]) .quiz { background: #fff; }
+:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"], [data-theme="shetty"], [data-theme="brendon"]) .btn--gold { color: #fff; box-shadow: none; }
+:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"], [data-theme="shetty"], [data-theme="brendon"]) .btn--gold:hover { background: var(--gold-deep); }
+:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"], [data-theme="shetty"], [data-theme="brendon"]) .btn--gold .btn-arrow { background: #fff; color: var(--gold); }
+:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"], [data-theme="shetty"], [data-theme="brendon"]) .btn--dark .btn-arrow { color: #fff; }
+:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"], [data-theme="shetty"], [data-theme="brendon"]) :is(.price-badge, .quiz-done .done-mark) { color: #fff; }
+:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"], [data-theme="shetty"], [data-theme="brendon"]) ::selection { background: var(--gold); color: #fff; }
+:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"], [data-theme="shetty"], [data-theme="brendon"]) .opt input:checked + span { background: color-mix(in srgb, var(--gold) 10%, transparent); }
+:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"], [data-theme="shetty"], [data-theme="brendon"]) :is(.section--dark, .dark-card--ink) .btn--dark { color: #111; }
+:is([data-theme="apple"], [data-theme="tesla"], [data-theme="google"], [data-theme="shetty"], [data-theme="brendon"]) :is(.section--dark, .dark-card--ink) .btn--dark:hover { background: var(--gold); filter: brightness(1.1); }
 [data-theme="tesla"] :is(.section--dark, .dark-card--ink) :is(.btn--dark, .stage-dot) { color: #fff; }
 [data-theme="tesla"] :is(.section--dark, .dark-card--ink) .btn--dark .btn-arrow { background: #fff; }
 [data-theme="tesla"] .h1 .tone { color: var(--ink); font-weight: 600; }
@@ -187,6 +187,76 @@
 [data-theme="google"] .journey-full li:nth-child(4) .stage-dot { background: #4285f4; color: #fff; }
 [data-theme="google"] .journey-full li:nth-child(5) .stage-dot { background: #34a853; color: #fff; }
 [data-theme="google"] .h1 .tone { color: var(--gold); }
+
+/* ---------- Coaching-site inspired ---------- */
+
+/* Tony Robbins: white pages, charcoal bands, orange */
+[data-theme="robbins"], [data-theme="robbins"] .quiz {
+  --bg: #ffffff; --card: #f6f6f6; --tint: #f2f2f2;
+  --ink: #111111; --soft: #424242; --muted: #6b6b6b; --faint: #9a9a9a;
+  --line: rgba(0, 0, 0, 0.1);
+  --gold: #ff9700; --gold-deep: #e07f00;
+}
+[data-theme="robbins"] .section--dark, [data-theme="robbins"] .dark-card--ink {
+  --bg: #111111; --card: #1c1c1c; --tint: #1c1c1c;
+  --ink: #ffffff; --soft: #e6e6e6; --muted: #a8a8a8; --faint: #6f6f6f;
+  --line: rgba(255, 255, 255, 0.12);
+  --gold: #ff9700; --gold-deep: #ffa726;
+}
+[data-theme="robbins"] :is(.v-card, .quiz) { background: #fff; }
+[data-theme="robbins"] .portrait { background: var(--card); }
+[data-theme="robbins"] .btn--gold { box-shadow: none; }
+[data-theme="robbins"] .btn--gold:hover { background: #ffaa33; }
+
+/* Jay Shetty: warm cream, black type, orange */
+[data-theme="shetty"], [data-theme="shetty"] .quiz {
+  --bg: #fff9f1; --card: #f7f0e3; --tint: #f7f0e3;
+  --ink: #0c0c0c; --soft: #2b2b2b; --muted: #5e5a54; --faint: #9b958b;
+  --line: rgba(12, 12, 12, 0.1);
+  --gold: #fe7501; --gold-deep: #d95f00;
+}
+[data-theme="shetty"] .section--dark, [data-theme="shetty"] .dark-card--ink {
+  --bg: #0c0c0c; --card: #1a1815; --tint: #1a1815;
+  --ink: #fff9f1; --soft: #f1e9dc; --muted: #b5ada1; --faint: #7a746b;
+  --line: rgba(255, 249, 241, 0.12);
+  --gold: #fe7501; --gold-deep: #ff8a2b;
+}
+[data-theme="shetty"] .nav-shell { background: rgba(255, 249, 241, 0.9); }
+[data-theme="shetty"] .theme-menu { background: #fff9f1; }
+
+/* IAMACOMEBACK: near-black navy, bright blue */
+[data-theme="comeback"],
+[data-theme="comeback"] .section--dark,
+[data-theme="comeback"] .dark-card--ink,
+[data-theme="comeback"] .quiz {
+  --bg: #060d16; --card: #0b1825; --tint: #0b1825;
+  --ink: #ffffff; --soft: #f1f3f5; --muted: #b9c2cc; --faint: #188bf6;
+  --line: rgba(255, 255, 255, 0.1);
+  --gold: #188bf6; --gold-deep: #3b9bff;
+}
+[data-theme="comeback"] .portrait { background: #0f2236; }
+[data-theme="comeback"] .portrait-tag { background: #060d16; }
+[data-theme="comeback"] .nav-shell { background: rgba(6, 13, 22, 0.86); }
+@media (max-width: 920px) { [data-theme="comeback"] .site-nav { background: #060d16; } }
+[data-theme="comeback"] :is(.btn--dark, .btn--gold, .stage-dot, .price-badge, .quiz-done .done-mark, .explore-go) { color: #fff; }
+[data-theme="comeback"] :is(.btn--dark, .btn--gold):hover { background: #3b9bff; }
+[data-theme="comeback"] :is(.btn--dark, .btn--gold) .btn-arrow { background: #fff; color: var(--gold); }
+[data-theme="comeback"] ::selection { color: #fff; }
+
+/* Brendon Burchard: white and pale blue-grey, navy bands, electric blue */
+[data-theme="brendon"], [data-theme="brendon"] .quiz {
+  --bg: #ffffff; --card: #f5f7fb; --tint: #eef2f9;
+  --ink: #0b1730; --soft: #3d4a63; --muted: #6b7690; --faint: #9fb0d3;
+  --line: #e3e8f2;
+  --gold: #1d5cff; --gold-deep: #1747d1;
+}
+[data-theme="brendon"] .section--dark, [data-theme="brendon"] .dark-card--ink {
+  --bg: #0b1730; --card: #13224a; --tint: #13224a;
+  --ink: #ffffff; --soft: #e3e8f2; --muted: #aab6d0; --faint: #6b7690;
+  --line: rgba(255, 255, 255, 0.12);
+  --gold: #5b8cff; --gold-deep: #7aa2ff;
+}
+[data-theme="brendon"] .h1 .tone { color: var(--gold); }
 
 /* ---------- Appearance dropdown ---------- */
 
@@ -251,6 +321,12 @@
 .sw--apple { background: radial-gradient(circle, #0071e3 0 30%, #f5f5f7 33%); }
 .sw--tesla { background: radial-gradient(circle, #e31937 0 30%, #171a20 33%); }
 .sw--google { background: conic-gradient(#4285f4 0 25%, #ea4335 0 50%, #fbbc04 0 75%, #34a853 0); }
+.sw--robbins { background: radial-gradient(circle, #ff9700 0 30%, #111111 33%); }
+.sw--shetty { background: radial-gradient(circle, #fe7501 0 30%, #f7f0e3 33%); }
+.sw--comeback { background: radial-gradient(circle, #188bf6 0 30%, #060d16 33%); }
+.sw--brendon { background: radial-gradient(circle, #1d5cff 0 30%, #0b1730 33%); }
+.theme-menu { max-height: calc(100vh - 6rem); overflow-y: auto; }
+.theme-group { padding: 0.45rem 0.75rem 0.2rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 .theme-menu hr { border: 0; border-top: 1px solid var(--line); margin: 0.3rem 0.4rem; }
 
 @media (max-width: 1100px) { .theme-label, .theme-caret { display: none; } .theme-btn { padding: 0.6rem; } }
