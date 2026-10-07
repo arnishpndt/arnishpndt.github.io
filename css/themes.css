@@ -1,0 +1,132 @@
+/* Appearance themes, chosen from the header dropdown. Classic = no data-theme attribute. */
+
+/* ---------- Light: all-white backgrounds, black and gold type, no grey ---------- */
+
+[data-theme="light"],
+[data-theme="light"] .section--dark,
+[data-theme="light"] .dark-card--ink,
+[data-theme="light"] .quiz {
+  --bg: #ffffff;
+  --card: #ffffff;
+  --tint: #ffffff;
+  --ink: #111111;
+  --soft: #111111;
+  --muted: #111111;
+  --faint: #b8901c;
+  --line: rgba(184, 144, 28, 0.35);
+  --gold: #d4ac2b;
+  --gold-deep: #b8901c;
+}
+[data-theme="light"] .section--dark,
+[data-theme="light"] .dark-card--ink { background: #fff; color: var(--soft); }
+[data-theme="light"] .dark-card.dark-card--ink { background: #fff; border: 1px solid var(--line); }
+[data-theme="light"] .hero-card { background: #fff; border: 1px solid var(--line); }
+[data-theme="light"] .portrait { background: #fff; border: 1px solid var(--line); }
+[data-theme="light"] :is(.kicker, .hero-eyebrow, .pillar-icon, .option-tag, .tile-num, .stake-label) { color: var(--gold-deep); }
+[data-theme="light"] :is(.h1 .tone, .h2 .tone, .big-quote span) { color: var(--gold-deep); }
+[data-theme="light"] :is(.step, .pillar, .quote) { border-top-color: var(--gold); }
+[data-theme="light"] .price-card--featured { border-color: var(--gold); }
+[data-theme="light"] .dash-list li::before { color: var(--gold-deep); }
+[data-theme="light"] .foot-brand img { content: url("../assets/logo-mark.png"); }
+
+/* ---------- Dark: all-black backgrounds, white and gold type ---------- */
+
+[data-theme="dark"] { color-scheme: dark; }
+[data-theme="dark"],
+[data-theme="dark"] .section--dark,
+[data-theme="dark"] .dark-card--ink,
+[data-theme="dark"] .quiz {
+  --bg: #0a0a0a;
+  --card: #141414;
+  --tint: #141414;
+  --ink: #ffffff;
+  --soft: #ffffff;
+  --muted: #f1f1f1;
+  --faint: #e0b93a;
+  --line: rgba(224, 185, 58, 0.28);
+  --gold: #e0b93a;
+  --gold-deep: #e0b93a;
+}
+[data-theme="dark"] .section--dark,
+[data-theme="dark"] .dark-card--ink { background: var(--bg); color: var(--soft); }
+[data-theme="dark"] .dark-card.dark-card--ink { background: var(--bg); border: 1px solid var(--line); }
+[data-theme="dark"] .hero-card { background: var(--tint); }
+[data-theme="dark"] :is(.v-card, .quiz) { background: var(--card); }
+[data-theme="dark"] .portrait { background: #1c1c1c; }
+[data-theme="dark"] .portrait-tag { background: #0a0a0a; color: #fff; border: 1px solid var(--line); }
+[data-theme="dark"] .nav-shell { background: rgba(10, 10, 10, 0.86); }
+@media (max-width: 920px) { [data-theme="dark"] .site-nav { background: #0a0a0a; } }
+[data-theme="dark"] :is(.kicker, .hero-eyebrow, .pillar-icon, .option-tag, .tile-num, .stake-label) { color: var(--gold); }
+[data-theme="dark"] :is(.h1 .tone, .h2 .tone, .big-quote span) { color: var(--gold); }
+[data-theme="dark"] :is(.step, .pillar, .quote) { border-top-color: var(--gold); }
+[data-theme="dark"] .price-card--featured { border-color: var(--gold); }
+[data-theme="dark"] .dash-list li::before { color: var(--gold); }
+[data-theme="dark"] :is(.btn--dark, .btn--gold) { background: var(--gold); color: #111; }
+[data-theme="dark"] :is(.btn--dark, .btn--gold):hover { background: #ecc850; }
+[data-theme="dark"] :is(.btn--dark, .btn--gold) .btn-arrow { background: #111; color: var(--gold); }
+[data-theme="dark"] .btn--ghost:hover { color: #111; }
+[data-theme="dark"] :is(.stage-dot, .price-badge, .quiz-done .done-mark, .explore-go) { background: var(--gold); color: #111; }
+[data-theme="dark"] ::selection { color: #111; }
+[data-theme="dark"] :is(.brand img, .portrait-mark, .foot-brand img) { content: url("../assets/logo-mark-white.png"); }
+
+/* ---------- Appearance dropdown ---------- */
+
+.theme-pick { position: relative; }
+.theme-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font: 600 0.9rem var(--sans);
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+}
+.theme-btn:hover { border-color: var(--ink); }
+.theme-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.theme-ico {
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  background: linear-gradient(90deg, currentColor 50%, transparent 50%);
+}
+.theme-caret { font-size: 0.7rem; opacity: 0.7; }
+.theme-menu {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  z-index: 60;
+  min-width: 11.5rem;
+  display: grid;
+  padding: 0.4rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.4);
+}
+.theme-menu button {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  font: 500 0.92rem var(--sans);
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  cursor: pointer;
+}
+.theme-menu button:hover { background: var(--tint); }
+.theme-menu button[aria-checked="true"]::after { content: "\2713"; margin-left: auto; color: var(--gold-deep); font-weight: 700; }
+.sw { width: 1.3rem; height: 1.3rem; border-radius: 50%; border: 1px solid rgba(128, 128, 128, 0.4); flex-shrink: 0; }
+.sw--classic { background: linear-gradient(135deg, #ffffff 50%, #0d0f11 50%); }
+.sw--light { background: radial-gradient(circle, #d4ac2b 0 30%, #ffffff 33%); }
+.sw--dark { background: radial-gradient(circle, #e0b93a 0 30%, #0a0a0a 33%); }
+
+@media (max-width: 1100px) { .theme-label, .theme-caret { display: none; } .theme-btn { padding: 0.6rem; } }
+@media (max-width: 480px) { .theme-btn { padding: 0.5rem; } }

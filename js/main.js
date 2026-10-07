@@ -33,6 +33,41 @@
     reveals.forEach(function (el) { el.classList.add("in"); });
   }
 
+  var themeBtn = document.getElementById("themeBtn");
+  var themeMenu = document.getElementById("themeMenu");
+  if (themeBtn && themeMenu) {
+    var root = document.documentElement;
+    var items = themeMenu.querySelectorAll("[data-theme-set]");
+    var sync = function () {
+      var cur = root.getAttribute("data-theme") || "classic";
+      items.forEach(function (b) { b.setAttribute("aria-checked", b.getAttribute("data-theme-set") === cur ? "true" : "false"); });
+    };
+    var closeMenu = function () {
+      themeMenu.hidden = true;
+      themeBtn.setAttribute("aria-expanded", "false");
+    };
+    sync();
+    themeBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = themeMenu.hidden;
+      themeMenu.hidden = !open;
+      themeBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    items.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var t = b.getAttribute("data-theme-set");
+        if (t === "classic") root.removeAttribute("data-theme");
+        else root.setAttribute("data-theme", t);
+        try { localStorage.setItem("ss-theme", t); } catch (err) {}
+        sync();
+        closeMenu();
+        themeBtn.focus();
+      });
+    });
+    document.addEventListener("click", function (e) { if (!themeMenu.hidden && !themeMenu.contains(e.target)) closeMenu(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !themeMenu.hidden) { closeMenu(); themeBtn.focus(); } });
+  }
+
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 

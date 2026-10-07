@@ -13,12 +13,13 @@
   <meta property="og:image" content="assets/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="assets/favicon.png?v=pages1" type="image/png">
+  <link rel="icon" href="assets/favicon.png?v=theme1" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=pages1">
-  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="css/styles.css?v=theme1">
+  <link rel="stylesheet" href="css/themes.css?v=theme1">
+  <script>(function(d){d.classList.add('js');try{var q=new URLSearchParams(location.search).get('theme'),t=q||localStorage.getItem('ss-theme');if(q)localStorage.setItem('ss-theme',q);if(t==='light'||t==='dark')d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
 </head>
 <body>
 
@@ -27,7 +28,7 @@
   <header class="site-head" id="siteHead">
     <div class="nav-shell">
       <a class="brand" href="index.html" aria-label="Still Standing — home">
-        <img src="assets/logo-mark.png?v=pages1" width="34" height="34" alt="">
+        <img src="assets/logo-mark.png?v=theme1" width="34" height="34" alt="">
         <span>Still Standing</span>
       </a>
       <nav class="site-nav" id="siteNav" aria-label="Primary">
@@ -37,6 +38,16 @@
         <a href="book.html#faq">FAQ</a>
       </nav>
       <div class="head-actions">
+        <div class="theme-pick">
+          <button class="theme-btn" type="button" id="themeBtn" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu" aria-label="Appearance">
+            <span class="theme-ico" aria-hidden="true"></span><span class="theme-label">Appearance</span><span class="theme-caret" aria-hidden="true">&#9662;</span>
+          </button>
+          <div class="theme-menu" id="themeMenu" role="menu" aria-label="Appearance" hidden>
+            <button type="button" role="menuitemradio" aria-checked="true" data-theme-set="classic"><span class="sw sw--classic" aria-hidden="true"></span>Classic</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-theme-set="light"><span class="sw sw--light" aria-hidden="true"></span>Light</button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-theme-set="dark"><span class="sw sw--dark" aria-hidden="true"></span>Dark</button>
+          </div>
+        </div>
         <button class="nav-btn" type="button" id="navBtn" aria-expanded="false" aria-controls="siteNav">Menu</button>
         <a class="btn btn--dark btn--small" href="book.html"><span class="cta-long">Book a free call</span><span class="cta-short">Book a call</span></a>
       </div>
@@ -180,7 +191,7 @@
     <div class="wrap">
       <div class="foot-grid">
         <div class="foot-brand">
-          <img src="assets/logo-mark-white.png?v=pages1" width="88" height="88" alt="Still Standing">
+          <img src="assets/logo-mark-white.png?v=theme1" width="88" height="88" alt="Still Standing">
           <p>The answer is you.</p>
         </div>
         <div>
@@ -208,6 +219,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=pages1" defer></script>
+  <script src="js/main.js?v=theme1" defer></script>
 </body>
 </html>
