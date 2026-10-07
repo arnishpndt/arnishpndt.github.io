@@ -13,19 +13,17 @@
   --soft: #111111;
   --muted: #111111;
   --faint: #b8901c;
-  --line: rgba(184, 144, 28, 0.35);
+  --line: rgba(17, 17, 17, 0.1);
   --gold: #d4ac2b;
   --gold-deep: #b8901c;
 }
 [data-theme="light"] .section--dark,
 [data-theme="light"] .dark-card--ink { background: #fff; color: var(--soft); }
-[data-theme="light"] .dark-card.dark-card--ink { background: #fff; border: 1px solid var(--line); }
-[data-theme="light"] .hero-card { background: #fff; border: 1px solid var(--line); }
-[data-theme="light"] .portrait { background: #fff; border: 1px solid var(--line); }
+[data-theme="light"] .dark-card.dark-card--ink { background: #fff; border: 0; }
+[data-theme="light"] .hero-card { background: #fff; border: 0; }
+[data-theme="light"] .portrait { background: #fff; }
 [data-theme="light"] :is(.kicker, .hero-eyebrow, .pillar-icon, .option-tag, .tile-num, .stake-label) { color: var(--gold-deep); }
 [data-theme="light"] :is(.h1 .tone, .h2 .tone, .big-quote span) { color: var(--gold-deep); }
-[data-theme="light"] :is(.step, .pillar, .quote) { border-top-color: var(--gold); }
-[data-theme="light"] .price-card--featured { border-color: var(--gold); }
 [data-theme="light"] .dash-list li::before { color: var(--gold-deep); }
 [data-theme="light"] .foot-brand img { content: url("../assets/logo-mark.png"); }
 
