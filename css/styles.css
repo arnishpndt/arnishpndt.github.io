@@ -1,15 +1,15 @@
 :root {
   --bg: #ffffff;
-  --card: #faf9f6;
-  --tint: #f6f3ec;
-  --ink: #111416;
-  --soft: #343a40;
-  --muted: #646a72;
-  --faint: #a0a5ab;
-  --line: rgba(17, 20, 22, 0.1);
+  --card: #ffffff;
+  --tint: #ffffff;
+  --ink: #111111;
+  --soft: #111111;
+  --muted: #111111;
+  --faint: #b8901c;
+  --line: rgba(17, 17, 17, 0.1);
 
   --gold: #d4ac2b;
-  --gold-deep: #a8840f;
+  --gold-deep: #b8901c;
 
   --display: "Jost", "Futura", "Avenir Next", sans-serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
@@ -80,7 +80,7 @@ section { scroll-margin-top: 6rem; }
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--gold-deep);
   margin-bottom: 1rem;
 }
 .lead {
@@ -245,8 +245,8 @@ section { scroll-margin-top: 6rem; }
   border-radius: 28px;
   color: var(--soft);
   border: 1px solid var(--line);
-  background: var(--tint);
-  border-color: transparent;
+  background: #fff;
+  border: 0;
   padding: clamp(3rem, 7vw, 5.5rem) clamp(1.4rem, 5vw, 4.5rem) clamp(5rem, 9vw, 7.5rem);
 }
 .hero-card::before {
@@ -298,7 +298,7 @@ section { scroll-margin-top: 6rem; }
   aspect-ratio: 4 / 5;
   border-radius: 20px;
   overflow: hidden;
-  background: #ebe7dd;
+  background: #fff;
   display: grid;
   place-items: center;
 }
@@ -378,41 +378,12 @@ section { scroll-margin-top: 6rem; }
 .section--rule { padding-top: 0; }
 .section--rule > .wrap::before { content: ""; display: block; height: 1px; background: var(--line); margin-bottom: var(--sec); }
 
-/* Inverted bands: components read the same variables, so they flip automatically */
-.section--dark, .dark-card--ink {
-  --bg: #0d0f11;
-  --card: #16191c;
-  --tint: #1c2024;
-  --ink: #ffffff;
-  --soft: #d0d3d7;
-  --muted: #9ba1a8;
-  --faint: #737a82;
-  --line: rgba(255, 255, 255, 0.1);
-  --gold-deep: #e0b93a;
-  background: var(--bg);
-  color: var(--soft);
-}
-.section--dark ::selection, .dark-card--ink ::selection { color: #111416; }
-:is(.section--dark, .dark-card--ink) .btn--dark { background: var(--gold); color: #111416; }
+.section--dark, .dark-card--ink { background: var(--bg); color: var(--soft); }
+:is(.section--dark, .dark-card--ink) .btn--dark { background: var(--gold); color: var(--ink); }
 :is(.section--dark, .dark-card--ink) .btn--dark:hover { background: #e2bb3a; }
-:is(.section--dark, .dark-card--ink) .btn--dark .btn-arrow { background: #111416; color: var(--gold); }
-:is(.section--dark, .dark-card--ink) .btn--ghost:hover { color: #111416; }
-:is(.section--dark, .dark-card--ink) .stage-dot { background: var(--gold); color: #111416; }
-
-/* Light islands inside dark bands */
-.quiz {
-  --card: #faf9f6;
-  --tint: #f6f3ec;
-  --ink: #111416;
-  --soft: #343a40;
-  --muted: #646a72;
-  --line: rgba(17, 20, 22, 0.1);
-  --gold-deep: #a8840f;
-}
-.dark-card.dark-card--ink {
-  border-color: transparent;
-  background: var(--bg);
-}
+:is(.section--dark, .dark-card--ink) .btn--dark .btn-arrow { background: var(--ink); color: var(--gold); }
+:is(.section--dark, .dark-card--ink) .stage-dot { background: var(--gold); color: var(--ink); }
+.dark-card.dark-card--ink { border: 0; background: var(--bg); }
 
 .journey-layout { display: grid; gap: clamp(2rem, 5vw, 4rem); }
 @media (min-width: 960px) {
@@ -551,7 +522,7 @@ section { scroll-margin-top: 6rem; }
   font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--gold-deep);
   margin-bottom: 0.9rem;
 }
 .pillar p { margin-top: 0.6rem; color: var(--muted); }
@@ -586,7 +557,7 @@ section { scroll-margin-top: 6rem; }
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--gold-deep);
   margin-bottom: 1rem;
 }
 .option > p { margin-top: 0.6rem; color: var(--muted); }
