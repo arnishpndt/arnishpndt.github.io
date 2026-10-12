@@ -193,6 +193,11 @@ section { scroll-margin-top: 6rem; }
 }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--ink); }
 .head-actions { display: flex; align-items: center; gap: 0.4rem; }
+@media (min-width: 921px) {
+  .nav-shell { justify-content: flex-start; padding-right: clamp(1.25rem, 3vw, 2.75rem); }
+  .site-nav { margin-left: auto; }
+  .head-actions { margin-left: 2rem; }
+}
 .nav-btn {
   display: none;
   font: 600 0.9rem var(--sans);
