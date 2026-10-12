@@ -81,6 +81,12 @@
       stepError.textContent = "Pick at least one to keep going.";
       return;
     }
+    var safety = fs.querySelector('[name="safety"]:checked');
+    if (fs.hasAttribute("data-safety") && safety && safety.value === "yes") {
+      steps.hidden = true;
+      document.getElementById("quizCare").hidden = false;
+      return;
+    }
     if (current < fieldsets.length - 1) {
       show(current + 1);
       return;

@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Book a Free Call | Still Standing</title>
+  <title>Book a Free Call | Still Standing 365</title>
   <meta name="description" content="Start with your name and email, answer a few quick questions, and we&rsquo;ll set up your free, private call.">
   <meta name="theme-color" content="#ffffff">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Book a Free Call | Still Standing">
+  <meta property="og:title" content="Book a Free Call | Still Standing 365">
   <meta property="og:description" content="Private coaching for successful men ready to break free from gambling, drinking, and the habits holding them back.">
-  <meta property="og:image" content="assets/og.jpg">
+  <meta property="og:image" content="assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="assets/favicon.png?v=white1" type="image/png">
+  <link rel="icon" href="assets/favicon.png?v=v3" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=v3">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=white1">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=v3">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -26,9 +27,8 @@
 
   <header class="site-head" id="siteHead">
     <div class="nav-shell">
-      <a class="brand" href="index.html" aria-label="Still Standing — home">
-        <img src="assets/logo-mark.png?v=white1" width="34" height="34" alt="">
-        <span>Still Standing</span>
+      <a class="brand" href="index.html" aria-label="Still Standing 365 — home">
+        <img src="assets/ss365-horizontal-black.svg?v=v3" width="155" height="45" alt="The Answer Is You! Still Standing 365">
       </a>
       <nav class="site-nav" id="siteNav" aria-label="Primary">
         <a href="how.html">How it works</a>
@@ -52,11 +52,11 @@
           <div data-reveal>
             <p class="kicker">Book a free call</p>
             <h2 class="h2">Are you <span class="tone">ready?</span></h2>
-            <p class="lead">Start with your name and email. Then answer a few quick questions so we can make your free call count.</p>
+            <p class="lead">Start with your name and email, then a few private questions. Next comes a free 30 to 45 minute discovery call, and an answer within 48 hours.</p>
             <ul class="ready-points">
-              <li>Takes about two minutes</li>
-              <li>Completely private</li>
-              <li>No card, no pitch</li>
+              <li>Takes a few minutes</li>
+              <li>Private</li>
+              <li>No pressure, no countdowns, no same-call deadlines</li>
             </ul>
           </div>
 
@@ -79,18 +79,17 @@
 
             <form class="quiz-steps" id="quizSteps" hidden novalidate>
               <div class="quiz-progress" aria-hidden="true"><span id="quizBar"></span></div>
-              <p class="quiz-count" id="quizCount">Question 1 of 5</p>
+              <p class="quiz-count" id="quizCount">Question 1 of 7</p>
 
               <fieldset class="quiz-step" data-required>
                 <legend>What are you struggling with?</legend>
                 <p class="quiz-hint">Pick all that apply.</p>
                 <div class="opts">
-                  <label class="opt"><input type="checkbox" name="struggle" value="Gambling"><span>Gambling</span></label>
+                  <label class="opt"><input type="checkbox" name="struggle" value="Gambling"><span>Gambling or sports betting</span></label>
+                  <label class="opt"><input type="checkbox" name="struggle" value="Trading"><span>Day trading, crypto or options</span></label>
                   <label class="opt"><input type="checkbox" name="struggle" value="Alcohol"><span>Alcohol</span></label>
-                  <label class="opt"><input type="checkbox" name="struggle" value="Partying"><span>Partying / substances</span></label>
-                  <label class="opt"><input type="checkbox" name="struggle" value="Confidence"><span>Confidence</span></label>
-                  <label class="opt"><input type="checkbox" name="struggle" value="Ceiling"><span>Hitting a ceiling</span></label>
-                  <label class="opt"><input type="checkbox" name="struggle" value="Hiding"><span>Hiding something</span></label>
+                  <label class="opt"><input type="checkbox" name="struggle" value="Drugs"><span>Drugs or prescription misuse</span></label>
+                  <label class="opt"><input type="checkbox" name="struggle" value="Other compulsive"><span>Gaming, spending, sex or porn</span></label>
                   <label class="opt"><input type="checkbox" name="struggle" value="Other"><span>Something else</span></label>
                 </div>
               </fieldset>
@@ -115,21 +114,41 @@
                 </div>
               </fieldset>
 
-              <fieldset class="quiz-step" hidden>
-                <legend>What have you tried before?</legend>
-                <p class="quiz-hint">Optional. Pick all that apply.</p>
+              <fieldset class="quiz-step" data-required data-safety hidden>
+                <legend>Right now, is any of this true for you?</legend>
+                <ul class="quiz-list">
+                  <li>Thoughts of suicide or harming yourself</li>
+                  <li>A suicide attempt or an overdose in recent months</li>
+                  <li>Shakes, sweats, seizures or hallucinations when you stop drinking or using</li>
+                </ul>
                 <div class="opts">
-                  <label class="opt"><input type="checkbox" name="tried" value="Willpower"><span>Willpower</span></label>
-                  <label class="opt"><input type="checkbox" name="tried" value="Apps or books"><span>Apps or books</span></label>
-                  <label class="opt"><input type="checkbox" name="tried" value="Counselling"><span>Counselling</span></label>
-                  <label class="opt"><input type="checkbox" name="tried" value="Programs"><span>Programs or meetings</span></label>
-                  <label class="opt"><input type="checkbox" name="tried" value="Nothing yet"><span>Nothing yet</span></label>
+                  <label class="opt"><input type="radio" name="safety" value="yes"><span>Yes, one or more</span></label>
+                  <label class="opt"><input type="radio" name="safety" value="no"><span>No</span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="quiz-step" data-required hidden>
+                <legend>Is there one person you trust who could be part of your year?</legend>
+                <p class="quiz-hint">A spouse, partner, family member or close friend.</p>
+                <div class="opts">
+                  <label class="opt"><input type="radio" name="support" value="Yes"><span>Yes</span></label>
+                  <label class="opt"><input type="radio" name="support" value="Not yet"><span>Not yet</span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="quiz-step" hidden>
+                <legend>Which way in interests you?</legend>
+                <p class="quiz-hint">Optional. We&rsquo;ll talk it through on the call.</p>
+                <div class="opts">
+                  <label class="opt"><input type="radio" name="tier" value="Private"><span>Private 1:1 with Jamie</span></label>
+                  <label class="opt"><input type="radio" name="tier" value="Group"><span>A group cohort</span></label>
+                  <label class="opt"><input type="radio" name="tier" value="Not sure"><span>Not sure yet</span></label>
                 </div>
               </fieldset>
 
               <fieldset class="quiz-step" hidden>
                 <legend>How do we reach you?</legend>
-                <p class="quiz-hint">We&rsquo;ll use this to set up your free call.</p>
+                <p class="quiz-hint">We&rsquo;ll use this to set up your free discovery call.</p>
                 <div class="quiz-contact">
                   <div class="field">
                     <label for="q-phone">Phone (optional)</label>
@@ -149,13 +168,25 @@
               </div>
             </form>
 
+            <div class="quiz-done" id="quizCare" hidden role="status">
+              <h3 class="h3">Let&rsquo;s get you care first.</h3>
+              <p>Thank you for telling us. Right now, the right next step is care, not coaching. This isn&rsquo;t a no. Once you&rsquo;re stable, we&rsquo;d love to hear from you.</p>
+              <ul class="quiz-list">
+                <li>Emergency: <a href="tel:911">911</a></li>
+                <li>Suicide crisis (US &amp; Canada): call or text <a href="tel:988">988</a></li>
+                <li>US problem gambling: <a href="tel:18006973738">1-800-MY-RESET</a></li>
+                <li>BC: Gambling Support BC, <a href="tel:18887956111">1-888-795-6111</a></li>
+                <li>US substance use: SAMHSA, <a href="tel:18006624357">1-800-662-4357</a></li>
+              </ul>
+            </div>
+
             <div class="quiz-done" id="quizDone" hidden role="status">
               <span class="done-mark" aria-hidden="true">&check;</span>
               <h3 class="h3" id="doneTitle">You&rsquo;re in.</h3>
-              <p>We&rsquo;ll reach out privately to lock in your free call. The answer is you. This was the first step.</p>
+              <p>We&rsquo;ll reach out privately to set up your free discovery call. After it, you&rsquo;ll have an answer within 48 hours. The answer is you. This was the first step.</p>
             </div>
 
-            <p class="quiz-crisis">In crisis right now? Call or text <a href="tel:988">988</a>, or see the helplines below.</p>
+            <p class="quiz-crisis">In crisis right now? Call <a href="tel:911">911</a> or call or text <a href="tel:988">988</a>, or see the helplines below.</p>
           </div>
         </div>
       </div>
@@ -167,23 +198,43 @@
         <div class="faq-intro" data-reveal>
           <p class="kicker">Questions</p>
           <h2 class="h2">Straight <span class="tone">answers.</span></h2>
-          <p class="lead">Don&rsquo;t see yours? Ask it on the free call. Nothing is off the table.</p>
+          <p class="lead">Don&rsquo;t see yours? Ask it on the discovery call. Nothing is off the table.</p>
           <div class="section-cta">
             <a class="btn btn--ghost" href="#ready">Back to the questions</a>
           </div>
         </div>
         <div class="faq-list" data-reveal>
           <details>
-            <summary>What happens on the free call?</summary>
-            <p>You talk, we listen. We get a clear picture of where you are and where you want to go. If Still Standing is the right fit, we map out next steps. If it isn&rsquo;t, we&rsquo;ll point you somewhere better.</p>
+            <summary>What happens after I apply?</summary>
+            <p>A short application covers where you are, your safety, your goals and your support system. Then a free 30 to 45 minute discovery call to confirm fit and explain what coaching is and isn&rsquo;t. You&rsquo;ll get an answer within 48 hours. No countdown timers, no &ldquo;last spot&rdquo; claims, no same-call deadlines.</p>
           </details>
           <details>
             <summary>Is this rehab or therapy?</summary>
-            <p>No. This is coaching for high-performing men. Jamie is your guide, and when part of your plan calls for something more specific, we have the right people for it.</p>
+            <p>No. Still Standing 365 is coaching and mentorship led by someone who has lived it. It isn&rsquo;t medical care, detox, psychiatric treatment or therapy. It works alongside licensed care, never in place of it, and when part of your plan calls for something more, we have the right people for it.</p>
+          </details>
+          <details>
+            <summary>Can I keep taking my medication?</summary>
+            <p>Yes. Prescribed medications are part of recovery, including medications for opioid or alcohol use disorder. Coaches never advise you to start, stop or change a medication. That stays between you and your prescriber.</p>
+          </details>
+          <details>
+            <summary>What if I slip?</summary>
+            <p>A slip doesn&rsquo;t end the program. It resets the plan, not the person. You reach out, we work through it together, and the plan gets stronger.</p>
+          </details>
+          <details>
+            <summary>What if I need treatment during the year?</summary>
+            <p>Safety comes first. If you need more than coaching, we help you get it. You can pause for up to 3 months for treatment or medical care, and your end date moves with you, so you don&rsquo;t lose your year.</p>
           </details>
           <details>
             <summary>Is it private?</summary>
-            <p>Completely. No public member lists, no testimonials with your real name, nothing shared outside the room.</p>
+            <p>Yes. No public member lists, and what&rsquo;s shared in the group stays in the group. In the community app you can use a first name or an alias. The only exceptions are the ones the law sets: when someone&rsquo;s life is at immediate risk, when a child may be at risk, or when a court order requires it. You&rsquo;ll see these in writing before you start.</p>
+          </details>
+          <details>
+            <summary>Where is it based?</summary>
+            <p>Vancouver, British Columbia. Coaching runs online for clients across Canada and the US, and other countries case by case. The immersions and the annual mastermind happen in person in Vancouver.</p>
+          </details>
+          <details>
+            <summary>What if I&rsquo;m not a fit yet?</summary>
+            <p>Some people need clinical care before coaching can help. If that&rsquo;s you, we&rsquo;ll share crisis resources and a referral, and invite you back. You can re-apply after 90 days, or sooner with a note from your clinician.</p>
           </details>
           <details>
             <summary>What if I&rsquo;m still successful?</summary>
@@ -191,7 +242,7 @@
           </details>
           <details>
             <summary>I travel and run a business. Will this work for me?</summary>
-            <p>Yes. Sessions are built around men in motion. You can do this from anywhere.</p>
+            <p>Yes. Coaching runs online, so you can do this from anywhere. Daily check-ins happen in the app, and sessions work around your schedule.</p>
           </details>
         </div>
       </div>
@@ -203,16 +254,17 @@
     <div class="wrap">
       <div class="foot-grid">
         <div class="foot-brand">
-          <img src="assets/logo-mark.png?v=white1" width="88" height="88" alt="Still Standing">
-          <p>The answer is you.</p>
+          <img src="assets/ss365-main-black.svg?v=v3" width="150" height="148" alt="The Answer Is You! Still Standing 365">
         </div>
         <div>
           <p class="foot-title">Need help right now?</p>
           <ul class="foot-list">
-            <li>Canada &mdash; Problem Gambling Helpline: <a href="tel:18887956111">1-888-795-6111</a></li>
-            <li>Canada &mdash; Gamblers Anonymous: <a href="https://www.gamblersanonymous.org" rel="noopener">gamblersanonymous.org</a></li>
-            <li>US &mdash; National Problem Gambling Helpline: <a href="tel:18005224700">1-800-522-4700</a></li>
-            <li>Thoughts of harming yourself (US &amp; Canada): call or text <a href="tel:988">988</a></li>
+            <li>Emergency (US &amp; Canada): <a href="tel:911">911</a></li>
+            <li>Suicide crisis (US &amp; Canada): call or text <a href="tel:988">988</a></li>
+            <li>US &mdash; National Problem Gambling Helpline: <a href="tel:18006973738">1-800-MY-RESET</a> (1-800-697-3738)</li>
+            <li>BC &mdash; Gambling Support BC, 24/7: <a href="tel:18887956111">1-888-795-6111</a></li>
+            <li>US &mdash; SAMHSA National Helpline, 24/7: <a href="tel:18006624357">1-800-662-4357</a></li>
+            <li>Using alone? US: Never Use Alone <a href="tel:18004843731">800-484-3731</a> &middot; Canada: National Overdose Response Service <a href="tel:18886886677">1-888-688-6677</a></li>
           </ul>
         </div>
         <div>
@@ -225,12 +277,14 @@
         </div>
       </div>
       <div class="foot-legal">
-        <p>Still Standing provides coaching. It is not medical or psychological treatment and is not a substitute for professional care.</p>
-        <p>&copy; <span id="year">2026</span> Still Standing</p>
+        <p><strong>Still Standing 365 is coaching and mentorship, not medical treatment. In crisis? Call or text 988 in the US and Canada, or call 911.</strong></p>
+        <p>It is not medical care, detox, psychiatric treatment or therapy, and it works alongside licensed care, never in place of it. Prescribed medications are part of recovery; coaches never advise starting, stopping or changing one.</p>
+        <p>Based in Vancouver, British Columbia. Coaching runs online across Canada and the US.</p>
+        <p>&copy; <span id="year">2026</span> Still Standing 365</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js?v=white1" defer></script>
+  <script src="js/main.js?v=v3" defer></script>
 </body>
 </html>
