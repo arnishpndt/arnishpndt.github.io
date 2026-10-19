@@ -41,34 +41,9 @@
   var headlineCount = document.getElementById("headlineCount");
   if (headlineLine && headlineNext) {
     var headlines = [
-      "1 decision. 1 day at a time. 365.",
-      "No refusals.",
-      "I see you, you\u2019re not alone.",
-      "No more excuses.",
-      "I choose me.",
-      "Break the cycle.",
-      "You\u2019re the problem.",
-      "Stop betting against yourself.",
-      "Stop hiding. Start standing.",
-      "Lead yourself first.",
-      "Nobody\u2019s coming to save you.",
-      "Stop lying to yourself.",
-      "Your comeback starts here.",
-      "Quit destroying what you built.",
-      "Start leading yourself.",
-      "You lead everyone but yourself.",
-      "Kill the old you.",
-      "Stop living the same day on repeat.",
-      "Rebuild the person behind the success.",
-      "Become the person you pretend to be.",
-      "One decision. 365 days.",
-      "Enough is enough.",
-      "Get out of your own way.",
-      "Stand again. Stay standing.",
-      "Success shouldn\u2019t cost you yourself.",
-      "Stop losing in private.",
-      "This is where it turns.",
-      "Built to win. Done losing."
+      "I see you.",
+      "You are not alone.",
+      "1 decision, 1 day, 365."
     ];
     if (headlineCount) headlineCount.textContent = "Headline 1 of " + headlines.length;
     var headlineIndex = 0;
