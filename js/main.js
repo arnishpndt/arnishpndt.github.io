@@ -1,5 +1,6 @@
 (function () {
   "use strict";
+  window.__ssMainLoaded = true;
 
   var head = document.getElementById("siteHead");
   var navBtn = document.getElementById("navBtn");
@@ -29,6 +30,17 @@
       });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
     reveals.forEach(function (el) { io.observe(el); });
+    // Failsafe: if the observer never fires, reveal whatever is on screen anyway.
+    var revealNear = function () {
+      reveals.forEach(function (el) {
+        if (el.classList.contains("in")) return;
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.95 && r.bottom > 0) el.classList.add("in");
+      });
+    };
+    window.addEventListener("scroll", revealNear, { passive: true });
+    window.addEventListener("load", function () { setTimeout(revealNear, 300); });
+    setTimeout(revealNear, 1200);
   } else {
     reveals.forEach(function (el) { el.classList.add("in"); });
   }
