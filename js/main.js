@@ -50,8 +50,24 @@
       "Nobody\u2019s coming to save you.",
       "Stop lying to yourself.",
       "Your comeback starts here.",
-      "Quit destroying what you built."
+      "Quit destroying what you built.",
+      "Start leading yourself.",
+      "You lead everyone but yourself.",
+      "Kill the old you.",
+      "No more excuses.",
+      "Stop living the same day on repeat.",
+      "Rebuild the person behind the success.",
+      "Become the person you pretend to be.",
+      "One decision. 365 days.",
+      "Enough is enough.",
+      "Get out of your own way.",
+      "Stand again. Stay standing.",
+      "Success shouldn\u2019t cost you yourself.",
+      "Stop losing in private.",
+      "This is where it turns.",
+      "Built to win. Done losing."
     ];
+    if (headlineCount) headlineCount.textContent = "Headline 1 of " + headlines.length;
     var headlineIndex = 0;
     headlineNext.addEventListener("click", function () {
       headlineIndex = (headlineIndex + 1) % headlines.length;
