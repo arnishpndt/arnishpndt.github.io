@@ -36,6 +36,52 @@
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
+  var headlineLine = document.getElementById("headlineLine");
+  var headlineNext = document.getElementById("headlineNext");
+  var headlineCount = document.getElementById("headlineCount");
+  if (headlineLine && headlineNext) {
+    var headlines = [
+      "1 decision. 1 day at a time. 365.",
+      "No refusals.",
+      "I see you, you\u2019re not alone.",
+      "No more excuses.",
+      "I choose me.",
+      "Break the cycle.",
+      "You\u2019re the problem.",
+      "Stop betting against yourself.",
+      "Stop hiding. Start standing.",
+      "Lead yourself first.",
+      "Nobody\u2019s coming to save you.",
+      "Stop lying to yourself.",
+      "Your comeback starts here.",
+      "Quit destroying what you built.",
+      "Start leading yourself.",
+      "You lead everyone but yourself.",
+      "Kill the old you.",
+      "Stop living the same day on repeat.",
+      "Rebuild the person behind the success.",
+      "Become the person you pretend to be.",
+      "One decision. 365 days.",
+      "Enough is enough.",
+      "Get out of your own way.",
+      "Stand again. Stay standing.",
+      "Success shouldn\u2019t cost you yourself.",
+      "Stop losing in private.",
+      "This is where it turns.",
+      "Built to win. Done losing."
+    ];
+    if (headlineCount) headlineCount.textContent = "Headline 1 of " + headlines.length;
+    var headlineIndex = 0;
+    headlineNext.addEventListener("click", function () {
+      headlineIndex = (headlineIndex + 1) % headlines.length;
+      headlineLine.textContent = headlines[headlineIndex];
+      if (headlineCount) headlineCount.textContent = "Headline " + (headlineIndex + 1) + " of " + headlines.length;
+      headlineLine.classList.remove("swap");
+      void headlineLine.offsetWidth;
+      headlineLine.classList.add("swap");
+    });
+  }
+
   var start = document.getElementById("quizStart");
   var steps = document.getElementById("quizSteps");
   var done = document.getElementById("quizDone");
