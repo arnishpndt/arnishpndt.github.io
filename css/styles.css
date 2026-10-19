@@ -298,39 +298,6 @@ section { scroll-margin-top: 6rem; }
   line-height: 1;
 }
 .h1 .tone { color: var(--gold-deep); font-weight: 700; margin-top: 0.08em; }
-.headline-tools { display: flex; align-items: flex-start; gap: 0.9rem; }
-.headline-tools .h1 { flex: 1; min-width: 0; }
-.headline-next {
-  flex-shrink: 0;
-  width: 2.6rem;
-  height: 2.6rem;
-  margin-top: 0.55rem;
-  display: grid;
-  place-items: center;
-  border-radius: 999px;
-  border: 1.5px solid var(--gold-deep);
-  background: #fff;
-  color: var(--gold-deep);
-  font-size: 1.25rem;
-  line-height: 1;
-  cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-}
-.headline-next:hover { background: var(--gold); color: var(--ink); transform: translateX(2px); }
-.headline-next:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-.headline-count {
-  margin-top: 0.7rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold-deep);
-}
-#headlineLine.swap { animation: headline-swap 0.35s ease; }
-@keyframes headline-swap {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: none; }
-}
 .hero-sub {
   max-width: 42ch;
   margin: 1.5rem 0 2rem;
