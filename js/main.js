@@ -39,6 +39,9 @@
       });
     };
     window.addEventListener("scroll", revealNear, { passive: true });
+    window.addEventListener("beforeprint", function () {
+      reveals.forEach(function (el) { el.classList.add("in"); });
+    });
     window.addEventListener("load", function () { setTimeout(revealNear, 300); });
     setTimeout(revealNear, 1200);
   } else {
