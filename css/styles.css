@@ -416,6 +416,8 @@ section { scroll-margin-top: 6rem; }
 /* ---------- Generic section ---------- */
 
 .section { padding-block: var(--sec); }
+.section + .section { padding-top: clamp(0.75rem, 1.5vw, 1.25rem); }
+.section + .section--rule { padding-top: 0; }
 .section-head { margin-bottom: clamp(1.5rem, 3.5vw, 2.2rem); }
 .section-cta { margin-top: clamp(1.5rem, 3.5vw, 2.2rem); display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
 .center .section-cta, .section-cta.center { justify-content: center; }
