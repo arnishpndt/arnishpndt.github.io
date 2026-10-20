@@ -16,7 +16,7 @@
 
   --wrap: 1360px;
   --pad: clamp(1.1rem, 4vw, 2rem);
-  --sec: clamp(4rem, 8vw, 6.5rem);
+  --sec: clamp(2.5rem, 4.5vw, 3.75rem);
   --r: 22px;
   --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
 }
@@ -261,7 +261,7 @@ section { scroll-margin-top: 6rem; }
   border: 1px solid var(--line);
   background: #fff;
   border: 0;
-  padding: clamp(3rem, 7vw, 5.5rem) clamp(1.4rem, 5vw, 4.5rem) clamp(5rem, 9vw, 7.5rem);
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.4rem, 5vw, 4.5rem) clamp(3rem, 6vw, 4.5rem);
 }
 .hero-card::before {
   content: "";
@@ -416,8 +416,8 @@ section { scroll-margin-top: 6rem; }
 /* ---------- Generic section ---------- */
 
 .section { padding-block: var(--sec); }
-.section-head { margin-bottom: clamp(2rem, 5vw, 3.2rem); }
-.section-cta { margin-top: clamp(2rem, 5vw, 3rem); display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.section-head { margin-bottom: clamp(1.5rem, 3.5vw, 2.2rem); }
+.section-cta { margin-top: clamp(1.5rem, 3.5vw, 2.2rem); display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
 .center .section-cta, .section-cta.center { justify-content: center; }
 .section-cta .micro { margin-top: 0; }
 
@@ -883,7 +883,7 @@ section { scroll-margin-top: 6rem; }
 
 /* ---------- Page hero (sub pages) ---------- */
 
-.page-hero .hero-card { padding-bottom: clamp(3rem, 7vw, 5rem); }
+.page-hero .hero-card { padding-bottom: clamp(2rem, 5vw, 3.25rem); }
 .page-hero .hero-sub { max-width: 52ch; }
 .story-body { max-width: 44rem; margin-inline: auto; }
 .story-body .prose { max-width: none; font-size: 1.1rem; }
