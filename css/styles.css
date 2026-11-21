@@ -261,7 +261,7 @@ section { scroll-margin-top: 6rem; }
   border: 1px solid var(--line);
   background: #fff;
   border: 0;
-  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.4rem, 5vw, 4.5rem) clamp(3rem, 6vw, 4.5rem);
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.4rem, 5vw, 4.5rem) clamp(2.25rem, 4vw, 3.25rem);
 }
 .hero-card::before {
   content: "";
@@ -281,7 +281,12 @@ section { scroll-margin-top: 6rem; }
   gap: clamp(2.5rem, 5vw, 4rem);
   align-items: center;
 }
-@media (min-width: 960px) { .hero-grid { grid-template-columns: 1.25fr 0.75fr; } }
+@media (min-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1.25fr 0.75fr;
+    align-items: start;
+  }
+}
 
 .hero-eyebrow {
   font-size: 1rem;
@@ -378,7 +383,7 @@ section { scroll-margin-top: 6rem; }
 
 /* ---------- Validation card ---------- */
 
-.validate { position: relative; z-index: 2; margin-top: clamp(-4.5rem, -6vw, -3rem); }
+.validate { position: relative; z-index: 2; margin-top: clamp(1.75rem, 4vw, 3rem); }
 .v-card {
   background: #fff;
   border: 1px solid var(--line);
