@@ -251,7 +251,7 @@ section { scroll-margin-top: 6rem; }
 
 /* ---------- Hero ---------- */
 
-.hero { padding: 5.6rem var(--pad) 0; }
+.hero { padding: 5.8rem var(--pad) 0; }
 .hero-card {
   position: relative;
   overflow: hidden;
@@ -262,7 +262,7 @@ section { scroll-margin-top: 6rem; }
   border: 1px solid var(--line);
   background: #fff;
   border: 0;
-  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.4rem, 5vw, 4.5rem) clamp(2.25rem, 4vw, 3.25rem);
+  padding: clamp(3rem, 6.5vw, 5.5rem) clamp(1.6rem, 5.5vw, 5rem) clamp(2.75rem, 5vw, 4.5rem);
 }
 .hero-card::before {
   content: "";
@@ -279,24 +279,24 @@ section { scroll-margin-top: 6rem; }
   max-width: var(--wrap);
   margin-inline: auto;
   display: grid;
-  gap: clamp(2.5rem, 5vw, 4rem);
+  gap: clamp(2.75rem, 6vw, 5.5rem);
   align-items: center;
 }
 @media (min-width: 960px) {
   .hero-grid {
-    grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.9fr);
+    grid-template-columns: minmax(0, 1.15fr) minmax(22rem, 1fr);
     align-items: center;
-    gap: clamp(2.75rem, 5vw, 4.75rem);
+    gap: clamp(3rem, 6vw, 5.5rem);
   }
 }
 
 .hero-eyebrow {
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-deep);
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.35rem;
 }
 .h1 {
   color: var(--ink);
@@ -306,30 +306,31 @@ section { scroll-margin-top: 6rem; }
 }
 .h1 .tone { color: var(--gold-deep); font-weight: 700; margin-top: 0.08em; }
 .hero:not(.page-hero) .h1 {
-  font-size: clamp(1.85rem, 3.8vw, 3.15rem);
-  line-height: 1.12;
-  letter-spacing: 0.005em;
-  max-width: 28ch;
+  font-size: clamp(2.6rem, 6.2vw, 5.1rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  max-width: 11ch;
 }
 .hero:not(.page-hero) .h1 .tone {
-  display: inline;
-  margin-top: 0;
+  display: block;
+  margin-top: 0.08em;
 }
 .hero-sub {
-  max-width: 58ch;
-  margin: 1.45rem 0 1.9rem;
-  font-size: clamp(1.12rem, 1.85vw, 1.32rem);
-  line-height: 1.72;
+  max-width: 38ch;
+  margin: 1.75rem 0 2.15rem;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.65;
   color: #1c1c1e;
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .hero .micro { color: var(--muted); }
 .hero-note {
-  margin-top: 1.15rem;
-  font-size: clamp(1.05rem, 1.5vw, 1.15rem);
-  font-weight: 600;
+  margin-top: 1.35rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   line-height: 1.45;
-  color: var(--ink);
+  color: var(--muted);
 }
 
 .portrait {
@@ -361,7 +362,7 @@ section { scroll-margin-top: 6rem; }
   line-height: 1.35;
 }
 .portrait-tag strong { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.06em; }
-.hero .portrait { max-width: 26rem; justify-self: end; width: 100%; }
+.hero .portrait { max-width: 34rem; justify-self: end; width: 100%; }
 @media (max-width: 959px) {
   .hero-grid {
     justify-items: center;
@@ -375,8 +376,8 @@ section { scroll-margin-top: 6rem; }
   .hero .portrait {
     display: block;
     order: -1;
-    max-width: 17rem;
-    width: min(100%, 17rem);
+    max-width: 20rem;
+    width: min(100%, 20rem);
     justify-self: center;
     margin: 0 auto 0.25rem;
   }
@@ -1192,9 +1193,9 @@ section { scroll-margin-top: 6rem; }
     line-height: 1.7;
   }
   .hero:not(.page-hero) .h1 {
-    max-width: none;
-    font-size: clamp(1.7rem, 7.2vw, 2.35rem);
-    line-height: 1.12;
+    max-width: 10ch;
+    font-size: clamp(2.35rem, 11vw, 3.4rem);
+    line-height: 0.98;
   }
   .hero-actions {
     width: 100%;
