@@ -620,10 +620,18 @@ section { scroll-margin-top: 6rem; }
   display: block;
   color: var(--faint);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.98rem;
   margin-bottom: 0.8rem;
 }
-.tile p { margin-top: 0.45rem; color: var(--muted); }
+.tile .h3 {
+  font-size: clamp(1.35rem, 2.2vw, 1.65rem);
+}
+.tile p {
+  margin-top: 0.5rem;
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
 
 /* ---------- Dark band ---------- */
 
