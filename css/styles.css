@@ -77,11 +77,13 @@ section { scroll-margin-top: 6rem; }
   margin-top: 0.1em;
 }
 @media (min-width: 960px) {
-  #how .h2 {
+  #how .h2,
+  #outcome .h2 {
     font-size: clamp(1.9rem, 3.35vw, 3.1rem);
     max-width: none;
   }
-  #how .h2 .tone {
+  #how .h2 .tone,
+  #outcome .h2 .tone {
     display: inline;
     margin-top: 0;
   }
@@ -593,6 +595,12 @@ section { scroll-margin-top: 6rem; }
 
 .steps-grid { display: grid; gap: 1rem; }
 @media (min-width: 860px) { .steps-grid { grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 3vw, 3rem); } }
+#how {
+  padding-bottom: clamp(2.4rem, 4.5vw, 3.5rem);
+}
+#how + #outcome {
+  padding-top: clamp(1.6rem, 3.2vw, 2.6rem);
+}
 .step { border-top: 1px solid var(--ink); padding-top: 1.6rem; }
 .step-num {
   display: block;
