@@ -67,7 +67,8 @@ section { scroll-margin-top: 6rem; }
   font-size: clamp(2rem, 4.2vw, 3.8rem);
   line-height: 1.02;
 }
-.h2 .tone, .h1 .tone { display: block; color: var(--faint); }
+.h1 .tone { display: block; color: var(--faint); }
+.h2 .tone { display: inline; color: var(--faint); }
 .h3 {
   font-weight: 600;
   font-size: clamp(1.2rem, 2vw, 1.45rem);
