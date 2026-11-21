@@ -65,12 +65,17 @@ section { scroll-margin-top: 6rem; }
   text-wrap: balance;
 }
 .h2 {
-  font-weight: 700;
+  font-weight: 600;
   font-size: clamp(2rem, 4.2vw, 3.8rem);
   line-height: 1.02;
 }
-.h1 .tone { display: block; color: var(--faint); }
-.h2 .tone { display: inline; color: var(--faint); }
+.h1 .tone,
+.h2 .tone {
+  display: block;
+  color: var(--gold-deep);
+  font-weight: 800;
+  margin-top: 0.1em;
+}
 .h3 {
   font-weight: 600;
   font-size: clamp(1.2rem, 2vw, 1.45rem);
@@ -314,22 +319,24 @@ section { scroll-margin-top: 6rem; }
 }
 .h1 {
   color: var(--silver);
-  font-weight: 800;
-  font-size: clamp(2.5rem, 6vw, 5.6rem);
-  line-height: 1;
+  font-weight: 600;
+  font-size: clamp(2.5rem, 5.4vw, 4.6rem);
+  line-height: 0.98;
+  letter-spacing: 0.01em;
 }
-.h1 .tone { color: var(--gold-deep); font-weight: 800; margin-top: 0.08em; }
-.hero:not(.page-hero) .h1 {
+.hero:not(.page-hero) .h1 .tone {
+  white-space: nowrap;
+}
+.page-hero .h1,
+.story-title {
   font-size: clamp(2.5rem, 5.4vw, 4.6rem);
   font-weight: 600;
   line-height: 0.98;
   letter-spacing: 0.01em;
-  max-width: none;
+  max-width: 14ch;
 }
-.hero:not(.page-hero) .h1 .tone {
-  display: block;
-  margin-top: 0.1em;
-  font-weight: 800;
+.page-hero .h1 .tone,
+.story-title .tone {
   white-space: nowrap;
 }
 .hero-sub {
@@ -1026,8 +1033,10 @@ section { scroll-margin-top: 6rem; }
   width: 100%;
 }
 .story-title {
-  font-size: clamp(2.1rem, 4.4vw, 3.6rem);
-  line-height: 1.02;
+  font-size: clamp(2.5rem, 5.4vw, 4.6rem);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: 0.01em;
 }
 .story-lead {
   margin: 1.15rem 0 0;
@@ -1217,12 +1226,16 @@ section { scroll-margin-top: 6rem; }
     font-size: 1.12rem;
     line-height: 1.7;
   }
-  .hero:not(.page-hero) .h1 {
+  .hero:not(.page-hero) .h1,
+  .page-hero .h1,
+  .story-title {
     max-width: none;
     font-size: clamp(2.1rem, 9.5vw, 3rem);
     line-height: 0.98;
   }
-  .hero:not(.page-hero) .h1 .tone {
+  .hero:not(.page-hero) .h1 .tone,
+  .page-hero .h1 .tone,
+  .story-title .tone {
     white-space: normal;
     max-width: 12ch;
   }
