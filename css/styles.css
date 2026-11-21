@@ -121,7 +121,7 @@ section { scroll-margin-top: 6rem; }
 .btn:active { transform: scale(0.98); }
 .btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
-.btn--gold { background: var(--gold); color: var(--silver); box-shadow: 0 10px 30px -10px rgba(196, 154, 76, 0.6); }
+.btn--gold { background: var(--gold); color: #fff; box-shadow: 0 10px 30px -10px rgba(196, 154, 76, 0.6); }
 .btn--gold:hover { background: #d0a95e; }
 .btn--dark { background: var(--ink); color: #fff; }
 .btn--dark:hover { background: #2a3035; }
@@ -129,17 +129,19 @@ section { scroll-margin-top: 6rem; }
 .btn--ghost:hover { background: var(--ink); color: #fff; }
 
 .btn--arrow {
-  padding: 0.95rem 1.45rem;
-  gap: 0.55rem;
+  padding: 0.7rem 1.25rem;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  line-height: 1.2;
 }
 .btn-arrow {
   display: inline-block;
-  font-size: 1.15em;
+  font-size: 1.05em;
   line-height: 1;
   font-weight: 500;
   transition: transform 0.2s var(--ease);
 }
-.btn--gold .btn-arrow { color: #4f535a; }
+.btn--gold .btn-arrow { color: #fff; }
 .btn--dark .btn-arrow { color: var(--gold); }
 .btn:hover .btn-arrow { transform: translateX(4px); }
 .btn--small {
