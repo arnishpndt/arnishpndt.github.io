@@ -566,7 +566,8 @@ section { scroll-margin-top: 6rem; }
   color: var(--gold);
   margin-bottom: 1rem;
 }
-.step p { margin-top: 0.6rem; color: var(--muted); }
+.step .h3 { color: var(--silver); }
+.step p { margin-top: 0.6rem; color: var(--silver); }
 
 /* ---------- Problem ---------- */
 
