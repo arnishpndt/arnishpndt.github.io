@@ -51,27 +51,6 @@
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-  var headlineLine = document.getElementById("headlineLine");
-  var headlineNext = document.getElementById("headlineNext");
-  var headlineCount = document.getElementById("headlineCount");
-  if (headlineLine && headlineNext) {
-    var headlines = [
-      "I see you.",
-      "You are not alone.",
-      "1 decision, 1 day, 365."
-    ];
-    if (headlineCount) headlineCount.textContent = "Headline 1 of " + headlines.length;
-    var headlineIndex = 0;
-    headlineNext.addEventListener("click", function () {
-      headlineIndex = (headlineIndex + 1) % headlines.length;
-      headlineLine.textContent = headlines[headlineIndex];
-      if (headlineCount) headlineCount.textContent = "Headline " + (headlineIndex + 1) + " of " + headlines.length;
-      headlineLine.classList.remove("swap");
-      void headlineLine.offsetWidth;
-      headlineLine.classList.add("swap");
-    });
-  }
-
   var form = document.getElementById("bookForm");
   var gate = document.getElementById("quizGate");
   var steps = document.getElementById("quizSteps");
