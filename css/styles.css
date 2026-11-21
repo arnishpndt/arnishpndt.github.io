@@ -283,18 +283,19 @@ section { scroll-margin-top: 6rem; }
 }
 @media (min-width: 960px) {
   .hero-grid {
-    grid-template-columns: 1.25fr 0.75fr;
-    align-items: start;
+    grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.9fr);
+    align-items: center;
+    gap: clamp(2.75rem, 5vw, 4.75rem);
   }
 }
 
 .hero-eyebrow {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gold-deep);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.1rem;
 }
 .h1 {
   color: var(--ink);
@@ -303,19 +304,26 @@ section { scroll-margin-top: 6rem; }
   line-height: 1;
 }
 .h1 .tone { color: var(--gold-deep); font-weight: 700; margin-top: 0.08em; }
-.hero:not(.page-hero) .h1 { font-size: clamp(2rem, 4.2vw, 3.8rem); line-height: 1.02; }
+.hero:not(.page-hero) .h1 {
+  font-size: clamp(2.2rem, 4.8vw, 4.05rem);
+  line-height: 1.08;
+  letter-spacing: 0.005em;
+  max-width: 14ch;
+}
 .hero-sub {
-  max-width: 42ch;
-  margin: 1.5rem 0 2rem;
-  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
-  color: var(--soft);
+  max-width: 58ch;
+  margin: 1.45rem 0 1.9rem;
+  font-size: clamp(1.12rem, 1.85vw, 1.32rem);
+  line-height: 1.72;
+  color: #1c1c1e;
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .hero .micro { color: var(--muted); }
 .hero-note {
-  margin-top: 1.1rem;
-  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  margin-top: 1.15rem;
+  font-size: clamp(1.05rem, 1.5vw, 1.15rem);
   font-weight: 600;
+  line-height: 1.45;
   color: var(--ink);
 }
 
@@ -348,7 +356,7 @@ section { scroll-margin-top: 6rem; }
   line-height: 1.35;
 }
 .portrait-tag strong { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.06em; }
-.hero .portrait { max-width: 28rem; justify-self: end; width: 100%; }
+.hero .portrait { max-width: 26rem; justify-self: end; width: 100%; }
 @media (max-width: 959px) {
   .hero-grid {
     justify-items: center;
@@ -394,7 +402,13 @@ section { scroll-margin-top: 6rem; }
   gap: clamp(1.5rem, 4vw, 3.5rem);
 }
 @media (min-width: 900px) { .v-card { grid-template-columns: 1.1fr 0.9fr; align-items: center; } }
-.v-card p { margin-top: 1rem; color: var(--muted); max-width: 46ch; }
+.v-card p {
+  margin-top: 1rem;
+  color: #1c1c1e;
+  max-width: 56ch;
+  font-size: clamp(1.05rem, 1.5vw, 1.15rem);
+  line-height: 1.7;
+}
 
 .checks { list-style: none; }
 .checks li {
@@ -1170,9 +1184,15 @@ section { scroll-margin-top: 6rem; }
     font-size: clamp(1.95rem, 9.5vw, 2.75rem);
   }
   .hero-sub {
+    max-width: 36rem;
+    margin: 1.15rem auto 1.5rem;
+    font-size: 1.12rem;
+    line-height: 1.7;
+  }
+  .hero:not(.page-hero) .h1 {
     max-width: none;
-    margin: 1.15rem 0 1.5rem;
-    font-size: 1.02rem;
+    font-size: clamp(2.15rem, 9vw, 2.9rem);
+    line-height: 1.08;
   }
   .hero-actions {
     width: 100%;
