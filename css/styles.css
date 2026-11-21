@@ -263,7 +263,7 @@ section { scroll-margin-top: 6rem; }
   .brand-sub { font-size: 0.62rem; letter-spacing: 0.14em; }
   .nav-btn { padding: 0.5rem 0.35rem; font-size: 0.85rem; }
   .head-actions .btn--arrow {
-    padding: 0.75rem 1.1rem;
+    padding: 0.62rem 1rem;
     font-size: 0.85rem;
   }
   .cta-long { display: none; }
@@ -500,9 +500,9 @@ section { scroll-margin-top: 6rem; }
 .section--rule > .wrap::before { content: ""; display: block; height: 1px; background: var(--line); margin-bottom: var(--sec); }
 
 .section--dark, .dark-card--ink { background: var(--bg); color: var(--soft); }
-:is(.section--dark, .dark-card--ink) .btn--dark { background: var(--gold); color: var(--silver); }
+:is(.section--dark, .dark-card--ink) .btn--dark { background: var(--gold); color: #fff; }
 :is(.section--dark, .dark-card--ink) .btn--dark:hover { background: #d0a95e; }
-:is(.section--dark, .dark-card--ink) .btn--dark .btn-arrow { color: #4f535a; }
+:is(.section--dark, .dark-card--ink) .btn--dark .btn-arrow { color: #fff; }
 :is(.section--dark, .dark-card--ink) .stage-dot { background: var(--gold); color: var(--ink); }
 .dark-card.dark-card--ink { border: 0; background: var(--bg); }
 
