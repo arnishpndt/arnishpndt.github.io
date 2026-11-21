@@ -63,7 +63,6 @@ section { scroll-margin-top: 6rem; }
   font-family: var(--display);
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  text-wrap: balance;
   background: var(--logo-silver);
   -webkit-background-clip: text;
   background-clip: text;
@@ -74,19 +73,21 @@ section { scroll-margin-top: 6rem; }
   font-weight: 500;
   font-size: clamp(2.5rem, 5.4vw, 4.6rem);
   line-height: 0.94;
+  white-space: nowrap;
 }
 .h2 {
   font-weight: 500;
   font-size: clamp(1.7rem, 3vw, 2.65rem);
   line-height: 0.96;
   max-width: none;
+  white-space: nowrap;
 }
 .h1 .tone,
 .h2 .tone {
-  display: inline;
-  margin-top: 0;
+  display: inline !important;
+  margin-top: 0 !important;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 1em !important;
   letter-spacing: 0.015em;
   line-height: inherit;
   white-space: nowrap;
@@ -101,6 +102,16 @@ section { scroll-margin-top: 6rem; }
   font-size: clamp(1.2rem, 2vw, 1.45rem);
   line-height: 1.15;
   letter-spacing: 0.02em;
+  text-wrap: balance;
+  white-space: normal;
+}
+@media (max-width: 899px) {
+  .h1, .h2 {
+    white-space: normal;
+  }
+  .h1 .tone, .h2 .tone {
+    white-space: normal;
+  }
 }
 .kicker {
   font-family: var(--sans);
