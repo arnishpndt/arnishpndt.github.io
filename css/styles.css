@@ -57,26 +57,41 @@ section { scroll-margin-top: 6rem; }
 }
 .skip-link:focus { top: 1rem; }
 
-/* ---------- Type ---------- */
+/* ---------- Type (logo lettering system) ---------- */
 
 .h1, .h2, .h3 {
   font-family: var(--display);
   text-transform: uppercase;
-  color: var(--silver);
-  letter-spacing: 0.005em;
+  letter-spacing: 0.02em;
   text-wrap: balance;
+  background: var(--logo-silver);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.h1 {
+  font-weight: 500;
+  font-size: clamp(2.5rem, 5.4vw, 4.6rem);
+  line-height: 0.94;
 }
 .h2 {
   font-weight: 500;
-  font-size: clamp(2rem, 4.2vw, 3.8rem);
-  line-height: 1.02;
+  font-size: clamp(1.9rem, 3.6vw, 3.25rem);
+  line-height: 0.96;
 }
 .h1 .tone,
 .h2 .tone {
   display: block;
-  color: var(--gold-deep);
-  font-weight: 800;
-  margin-top: 0.1em;
+  margin-top: 0.06em;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  line-height: 0.94;
+  background: var(--logo-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 @media (min-width: 960px) {
   #how .h2,
@@ -88,6 +103,7 @@ section { scroll-margin-top: 6rem; }
   #outcome .h2 .tone {
     display: inline;
     margin-top: 0;
+    font-size: 1em;
   }
 }
 .h3 {
@@ -95,7 +111,6 @@ section { scroll-margin-top: 6rem; }
   font-size: clamp(1.2rem, 2vw, 1.45rem);
   line-height: 1.15;
   letter-spacing: 0.02em;
-  color: var(--silver);
 }
 .kicker {
   font-family: var(--sans);
@@ -103,8 +118,12 @@ section { scroll-margin-top: 6rem; }
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold-deep);
   margin-bottom: 1rem;
+  background: var(--logo-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 .lead {
   font-size: clamp(1.05rem, 1.6vw, 1.2rem);
@@ -337,55 +356,33 @@ section { scroll-margin-top: 6rem; }
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold-deep);
   margin-bottom: 1.35rem;
-}
-.h1 {
-  color: var(--silver);
-  font-weight: 500;
-  font-size: clamp(2.5rem, 5.4vw, 4.6rem);
-  line-height: 0.98;
-  letter-spacing: 0.01em;
-}
-/* Home hero: 1:1 with logo lettering, larger scale */
-.hero:not(.page-hero) .h1 {
-  font-family: var(--display);
-  font-weight: 500;
-  font-size: clamp(2.1rem, 4.4vw, 3.55rem);
-  line-height: 0.94;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  max-width: none;
-  background: var(--logo-silver);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-.hero:not(.page-hero) .h1 .tone {
-  display: block;
-  margin-top: 0.06em;
-  font-weight: 700;
-  font-size: 1.48em;
-  letter-spacing: 0.015em;
-  line-height: 0.94;
-  white-space: nowrap;
   background: var(--logo-gold);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
+/* Home hero: logo lettering at larger scale */
+.hero:not(.page-hero) .h1 {
+  font-size: clamp(2.1rem, 4.4vw, 3.55rem);
+  max-width: none;
+}
+.hero:not(.page-hero) .h1 .tone {
+  font-size: 1.48em;
+  white-space: nowrap;
+}
 .page-hero .h1,
 .story-title {
-  font-size: clamp(2.5rem, 5.4vw, 4.6rem);
+  font-size: clamp(2.35rem, 5vw, 4.2rem);
   font-weight: 500;
-  line-height: 0.98;
-  letter-spacing: 0.01em;
+  line-height: 0.94;
+  letter-spacing: 0.02em;
   max-width: 14ch;
 }
 .page-hero .h1 .tone,
 .story-title .tone {
+  font-size: 1.28em;
   white-space: nowrap;
 }
 .hero-sub {
@@ -643,7 +640,6 @@ section { scroll-margin-top: 6rem; }
   color: var(--gold);
   margin-bottom: 1rem;
 }
-.step .h3 { color: var(--silver); }
 .step p { margin-top: 0.6rem; color: var(--silver); }
 
 /* ---------- Problem ---------- */
@@ -684,10 +680,16 @@ section { scroll-margin-top: 6rem; }
 .tile { border-top: 1px solid var(--line); padding: 1.6rem 0 2rem; }
 .tile-num {
   display: block;
-  color: var(--faint);
+  font-family: var(--display);
   font-weight: 600;
   font-size: 0.98rem;
+  letter-spacing: 0.06em;
   margin-bottom: 0.8rem;
+  background: var(--logo-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 .tile .h3 {
   font-size: clamp(1.35rem, 2.2vw, 1.65rem);
@@ -713,7 +715,13 @@ section { scroll-margin-top: 6rem; }
     linear-gradient(160deg, #fbfaf6 0%, var(--tint) 100%);
   padding: var(--sec) clamp(1.4rem, 5vw, 4.5rem);
 }
-.dark-card .h2 .tone { color: var(--gold-deep); }
+.dark-card .h2 .tone {
+  background: var(--logo-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
 .dark-inner { max-width: var(--wrap); margin-inline: auto; }
 
 .pillar-grid { display: grid; gap: 1rem; margin-top: clamp(2rem, 5vw, 3rem); }
@@ -736,11 +744,23 @@ section { scroll-margin-top: 6rem; }
   text-transform: uppercase;
   font-weight: 500;
   font-size: clamp(1.5rem, 3.4vw, 2.4rem);
-  line-height: 1.12;
-  color: var(--text);
+  letter-spacing: 0.02em;
+  line-height: 1.05;
   max-width: 24ch;
+  background: var(--logo-silver);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
-.big-quote span { color: var(--gold-deep); }
+.big-quote span {
+  font-weight: 700;
+  background: var(--logo-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
 
 /* ---------- Options ---------- */
 
@@ -917,7 +937,6 @@ section { scroll-margin-top: 6rem; }
   border-radius: var(--r);
   padding: clamp(1.5rem, 3.5vw, 2.4rem);
 }
-.quiz .h3 { color: var(--text); }
 .field { display: grid; gap: 0.35rem; }
 .field label { font-size: 0.85rem; font-weight: 600; color: var(--text); }
 .field input, .field textarea {
@@ -972,10 +991,15 @@ section { scroll-margin-top: 6rem; }
 .quiz-step legend {
   font-family: var(--display);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(1.25rem, 2.4vw, 1.55rem);
-  line-height: 1.15;
-  color: var(--text);
+  letter-spacing: 0.02em;
+  line-height: 1.08;
+  background: var(--logo-silver);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 .quiz-hint { margin-top: 0.35rem; font-size: 0.9rem; color: var(--muted); }
 .opts {
@@ -1092,10 +1116,10 @@ section { scroll-margin-top: 6rem; }
   width: 100%;
 }
 .story-title {
-  font-size: clamp(2.5rem, 5.4vw, 4.6rem);
+  font-size: clamp(2.35rem, 5vw, 4.2rem);
   font-weight: 500;
-  line-height: 0.98;
-  letter-spacing: 0.01em;
+  line-height: 0.94;
+  letter-spacing: 0.02em;
 }
 .story-lead {
   margin: 1.15rem 0 0;
@@ -1130,9 +1154,15 @@ section { scroll-margin-top: 6rem; }
   border-left: 3px solid var(--gold);
   font-family: var(--display);
   text-transform: uppercase;
+  font-weight: 700;
   font-size: clamp(1.25rem, 2.5vw, 1.7rem);
-  line-height: 1.2;
-  color: var(--text);
+  letter-spacing: 0.015em;
+  line-height: 1.15;
+  background: var(--logo-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 .story-cta {
   margin-top: 0.35rem;
@@ -1256,7 +1286,19 @@ section { scroll-margin-top: 6rem; }
 #ready { padding-bottom: var(--sec); }
 .foot-grid { display: grid; gap: 2.5rem; align-items: center; justify-items: center; }
 @media (min-width: 900px) { .foot-grid { grid-template-columns: auto; justify-content: center; justify-items: center; } }
-.foot-title { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; font-size: 1rem; color: var(--text); margin-bottom: 0.8rem; }
+.foot-title {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  background: var(--logo-silver);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
 .foot-list { list-style: none; }
 .foot-list li { padding: 0.35rem 0; color: var(--muted); }
 .foot-list a { color: var(--text); font-weight: 600; white-space: nowrap; text-decoration-color: var(--gold); }
