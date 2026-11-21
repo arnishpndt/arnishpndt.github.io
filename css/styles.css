@@ -136,7 +136,19 @@ section { scroll-margin-top: 6rem; }
 .btn--gold .btn-arrow { background: var(--ink); color: var(--gold); }
 .btn--dark .btn-arrow { background: var(--gold); color: var(--ink); }
 .btn:hover .btn-arrow { transform: translateX(3px); }
-.btn--small { padding: 0.65rem 1.15rem; font-size: 0.9rem; }
+.btn--small {
+  padding: 0.8rem 1.4rem;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  border-radius: 8px;
+}
+.head-actions .btn--dark {
+  box-shadow: 0 10px 24px -14px rgba(0, 0, 0, 0.55);
+}
+.head-actions .btn--dark:hover {
+  background: #161618;
+  box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.6);
+}
 
 .text-link {
   display: inline-flex;
@@ -249,7 +261,7 @@ section { scroll-margin-top: 6rem; }
   .brand-answer { font-size: 0.88rem; }
   .brand-sub { font-size: 0.62rem; letter-spacing: 0.14em; }
   .nav-btn { padding: 0.5rem 0.35rem; font-size: 0.85rem; }
-  .head-actions .btn--small { padding: 0.6rem 0.85rem; font-size: 0.8rem; }
+  .head-actions .btn--small { padding: 0.72rem 1rem; font-size: 0.8rem; }
   .cta-long { display: none; }
 }
 @media (min-width: 481px) { .cta-short { display: none; } }
