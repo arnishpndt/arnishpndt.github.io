@@ -77,34 +77,24 @@ section { scroll-margin-top: 6rem; }
 }
 .h2 {
   font-weight: 500;
-  font-size: clamp(1.9rem, 3.6vw, 3.25rem);
+  font-size: clamp(1.7rem, 3vw, 2.65rem);
   line-height: 0.96;
+  max-width: none;
 }
 .h1 .tone,
 .h2 .tone {
-  display: block;
-  margin-top: 0.06em;
+  display: inline;
+  margin-top: 0;
   font-weight: 700;
+  font-size: 1em;
   letter-spacing: 0.015em;
-  line-height: 0.94;
+  line-height: inherit;
+  white-space: nowrap;
   background: var(--logo-gold);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-}
-@media (min-width: 960px) {
-  #how .h2,
-  #outcome .h2 {
-    font-size: clamp(1.9rem, 3.35vw, 3.1rem);
-    max-width: none;
-  }
-  #how .h2 .tone,
-  #outcome .h2 .tone {
-    display: inline;
-    margin-top: 0;
-    font-size: 1em;
-  }
 }
 .h3 {
   font-weight: 600;
@@ -377,23 +367,29 @@ section { scroll-margin-top: 6rem; }
 }
 .page-hero .h1,
 .story-title {
-  font-size: clamp(2.35rem, 5vw, 4.2rem);
+  font-size: clamp(1.85rem, 3.6vw, 3.1rem);
   font-weight: 500;
   line-height: 0.94;
   letter-spacing: 0.02em;
-  max-width: 14ch;
+  max-width: none;
+  white-space: nowrap;
 }
 .page-hero .h1 .tone,
 .story-title .tone {
-  font-size: 1.28em;
+  display: inline;
+  margin-top: 0;
+  font-size: 1em;
   white-space: nowrap;
 }
 .hero-sub {
   max-width: 46ch;
-  margin: 1.15rem 0 1.4rem;
+  margin: 0.85rem 0 0;
   font-size: clamp(1.05rem, 1.5vw, 1.2rem);
   line-height: 1.65;
   color: var(--text);
+}
+.page-hero .hero-sub {
+  margin-bottom: 0;
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .hero .micro { color: var(--muted); }
@@ -1091,25 +1087,40 @@ section { scroll-margin-top: 6rem; }
 
 /* ---------- Page hero (sub pages) ---------- */
 
-.page-hero .hero-card { padding-bottom: clamp(1.35rem, 3vw, 2.15rem); }
-.page-hero .hero-sub { max-width: 52ch; }
+.page-hero {
+  padding-top: 5.1rem;
+  padding-bottom: 0;
+}
+.page-hero .hero-card {
+  padding: clamp(1.1rem, 2.5vw, 1.75rem) clamp(1.2rem, 4vw, 3.5rem) clamp(0.85rem, 2vw, 1.35rem);
+}
+.page-hero .hero-grid {
+  gap: 0;
+}
+.page-hero .hero-sub {
+  max-width: 52ch;
+  margin-top: 0.7rem;
+}
+.page-hero + .section {
+  padding-top: clamp(1rem, 2vw, 1.5rem);
+}
 
 /* ---------- My story ---------- */
 
 .story-page {
-  padding: 5.2rem var(--pad) clamp(2rem, 4vw, 3rem);
+  padding: 5.1rem var(--pad) clamp(1.5rem, 3vw, 2.25rem);
 }
 .story-layout {
   max-width: var(--wrap);
   margin-inline: auto;
   display: grid;
-  gap: clamp(1.25rem, 3vw, 2.25rem);
+  gap: clamp(1rem, 2.5vw, 1.75rem);
   align-items: start;
 }
 @media (min-width: 900px) {
   .story-layout {
     grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.7fr);
-    gap: clamp(1.75rem, 4vw, 3rem);
+    gap: clamp(1.35rem, 3vw, 2.25rem);
   }
 }
 .story-main {
@@ -1119,31 +1130,33 @@ section { scroll-margin-top: 6rem; }
   width: 100%;
 }
 .story-title {
-  font-size: clamp(2.35rem, 5vw, 4.2rem);
+  font-size: clamp(1.7rem, 3.2vw, 2.75rem);
   font-weight: 500;
   line-height: 0.94;
   letter-spacing: 0.02em;
+  max-width: none;
+  white-space: nowrap;
 }
 .story-lead {
-  margin: 1.15rem 0 0;
+  margin: 0.75rem 0 0;
   max-width: 36ch;
   font-size: clamp(1.05rem, 1.6vw, 1.2rem);
   line-height: 1.55;
   color: var(--soft);
 }
 .story-stack {
-  margin-top: clamp(2rem, 4vw, 2.75rem);
+  margin-top: clamp(1.15rem, 2.5vw, 1.65rem);
   display: grid;
-  gap: clamp(1.1rem, 2.2vw, 1.45rem);
+  gap: clamp(0.7rem, 1.5vw, 1rem);
 }
 .story-stack .break-rule {
-  margin: clamp(0.55rem, 1.5vw, 0.9rem) 0;
+  margin: clamp(0.25rem, 1vw, 0.45rem) 0;
 }
 .story-stack .break-space {
-  height: clamp(0.9rem, 2.2vw, 1.4rem);
+  height: clamp(0.45rem, 1.2vw, 0.75rem);
 }
 .story-stack .story-cta {
-  margin-top: clamp(0.75rem, 2vw, 1.25rem);
+  margin-top: clamp(0.5rem, 1.5vw, 0.85rem);
 }
 .story-p {
   margin: 0;
@@ -1333,25 +1346,36 @@ section { scroll-margin-top: 6rem; }
   .page-hero .h1,
   .story-title {
     max-width: none;
-    font-size: clamp(2.1rem, 9.5vw, 3rem);
-    line-height: 0.98;
+    font-size: clamp(1.35rem, 6vw, 2.1rem);
+    line-height: 0.94;
+    white-space: normal;
+  }
+  .page-hero .h1 .tone,
+  .story-title .tone {
+    display: inline;
+    white-space: normal;
+    max-width: none;
   }
   .hero:not(.page-hero) .h1 {
-    font-size: clamp(1.35rem, 6.2vw, 2.1rem);
+    font-size: clamp(1.2rem, 5.5vw, 1.85rem);
     line-height: 0.94;
-    white-space: nowrap;
+    white-space: normal;
   }
   .hero:not(.page-hero) .h1 .tone {
     display: inline;
     margin-top: 0;
     font-size: 1em;
-    white-space: nowrap;
+    white-space: normal;
     max-width: none;
   }
-  .page-hero .h1 .tone,
-  .story-title .tone {
+  .h2 {
+    font-size: clamp(1.45rem, 6vw, 2rem);
+  }
+  .h2 .tone {
     white-space: normal;
-    max-width: 12ch;
+  }
+  .page-hero + .section {
+    padding-top: 0.85rem;
   }
   .hero-actions {
     width: 100%;
