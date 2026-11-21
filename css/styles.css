@@ -1175,7 +1175,7 @@ section { scroll-margin-top: 6rem; }
   white-space: nowrap;
 }
 .story-lead {
-  margin: 0.75rem 0 0;
+  margin: 1.35rem 0 0;
   max-width: 36ch;
   font-size: clamp(1.05rem, 1.6vw, 1.2rem);
   line-height: 1.55;
