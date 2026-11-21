@@ -337,9 +337,12 @@ section { scroll-margin-top: 6rem; }
   display: flex;
   flex-direction: column;
   padding: 0.7rem 1rem;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   color: var(--ink);
   border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
   box-shadow: 0 8px 20px -12px rgba(0, 0, 0, 0.3);
   font-size: 0.85rem;
   line-height: 1.35;
@@ -1295,4 +1298,3 @@ section { scroll-margin-top: 6rem; }
   .site-head { position: absolute; }
   .nav-btn { display: none !important; }
 }
-
