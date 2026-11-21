@@ -999,22 +999,63 @@ section { scroll-margin-top: 6rem; }
 .story-cta {
   margin-top: 0.35rem;
 }
+.story-aside {
+  display: grid;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 22rem;
+  justify-self: end;
+}
 .story-page .story-portrait {
   display: block;
   width: 100%;
-  max-width: 22rem;
+  max-width: none;
   margin: 0;
 }
+.story-facts {
+  display: grid;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 1.15rem 1.2rem 0.85rem;
+  background: #fff;
+}
+.story-facts-kicker {
+  margin: 0 0 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+.story-fact {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+}
+.story-fact strong {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  line-height: 1;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+.story-fact span {
+  font-size: 0.9rem;
+  line-height: 1.35;
+  color: var(--muted);
+}
 @media (min-width: 900px) {
-  .story-page .story-portrait {
+  .story-aside {
     position: sticky;
     top: 6.5rem;
-    justify-self: end;
   }
 }
 @media (max-width: 899px) {
-  .story-page .story-portrait {
-    max-width: 16rem;
+  .story-aside {
+    max-width: 18rem;
+    justify-self: start;
     order: -1;
   }
 }
