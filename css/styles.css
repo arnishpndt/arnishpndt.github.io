@@ -805,10 +805,11 @@ section { scroll-margin-top: 6rem; }
   border-color: var(--gold-deep);
   box-shadow: 0 0 0 3px rgba(196, 154, 76, 0.25);
 }
-.quiz-start { display: grid; gap: 1rem; margin-top: 1.4rem; }
+.book-form { display: grid; gap: 1rem; margin-top: 1.4rem; }
+.quiz-gate { display: grid; gap: 1rem; }
 @media (min-width: 640px) { .quiz-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; } }
 .quiz-fields { display: grid; gap: 1rem; }
-.quiz-start .btn { justify-self: start; }
+.quiz-gate .btn { justify-self: start; }
 
 .quiz-progress { height: 4px; background: var(--tint); border-radius: 4px; overflow: hidden; }
 .quiz-progress span { display: block; height: 100%; width: 0; background: var(--gold); transition: width 0.35s var(--ease); }

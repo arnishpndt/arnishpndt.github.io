@@ -72,10 +72,12 @@
     });
   }
 
-  var start = document.getElementById("quizStart");
+  var form = document.getElementById("bookForm");
+  var gate = document.getElementById("quizGate");
   var steps = document.getElementById("quizSteps");
   var done = document.getElementById("quizDone");
-  if (!start || !steps || !done) return;
+  var care = document.getElementById("quizCare");
+  if (!form || !gate || !steps || !done) return;
 
   var fieldsets = steps.querySelectorAll(".quiz-step");
   var bar = document.getElementById("quizBar");
@@ -86,6 +88,7 @@
   var startError = document.getElementById("startError");
   var current = 0;
   var firstName = "";
+  var unlocked = false;
 
   function show(i) {
     current = i;
@@ -97,21 +100,28 @@
     stepError.textContent = "";
   }
 
-  start.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var name = start.querySelector('[name="first_name"]');
-    var email = start.querySelector('[name="email"]');
-    if (!name.value.trim()) { startError.textContent = "Add your first name."; name.focus(); return; }
-    if (!email.checkValidity() || !email.value.trim()) { startError.textContent = "Add a valid email."; email.focus(); return; }
+  function unlockQuestions() {
+    var name = form.querySelector('[name="first_name"]');
+    var email = form.querySelector('[name="email"]');
+    if (!name.value.trim()) { startError.textContent = "Add your first name."; name.focus(); return false; }
+    if (!email.checkValidity() || !email.value.trim()) { startError.textContent = "Add a valid email."; email.focus(); return false; }
     firstName = name.value.trim();
-    start.hidden = true;
+    unlocked = true;
+    gate.hidden = true;
     steps.hidden = false;
     show(0);
     var firstInput = fieldsets[0].querySelector("input");
     if (firstInput) firstInput.focus();
+    return true;
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!unlocked) unlockQuestions();
   });
 
   next.addEventListener("click", function () {
+    if (!unlocked) return;
     var fs = fieldsets[current];
     if (fs.hasAttribute("data-required") && !fs.querySelector("input:checked")) {
       stepError.textContent = "Pick at least one to keep going.";
@@ -119,15 +129,15 @@
     }
     var safety = fs.querySelector('[name="safety"]:checked');
     if (fs.hasAttribute("data-safety") && safety && safety.value === "yes") {
-      steps.hidden = true;
-      document.getElementById("quizCare").hidden = false;
+      form.hidden = true;
+      if (care) care.hidden = false;
       return;
     }
     if (current < fieldsets.length - 1) {
       show(current + 1);
       return;
     }
-    steps.hidden = true;
+    form.hidden = true;
     done.hidden = false;
     document.getElementById("doneTitle").textContent = "You\u2019re in, " + firstName + ".";
   });
