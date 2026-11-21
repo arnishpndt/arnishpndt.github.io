@@ -812,19 +812,31 @@ section { scroll-margin-top: 6rem; }
 .quiz-gate .btn { justify-self: start; }
 
 .quiz-progress { height: 4px; background: var(--tint); border-radius: 4px; overflow: hidden; }
-.quiz-progress span { display: block; height: 100%; width: 0; background: var(--gold); transition: width 0.4s var(--ease); }
+.quiz-progress span { display: block; height: 100%; width: 0; background: var(--gold); transition: width 0.45s var(--ease); }
 .quiz-count { margin: 0.9rem 0 0.4rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-.quiz-step { border: 0; min-height: 14rem; }
+.quiz-steps { position: relative; }
+.quiz-step {
+  border: 0;
+  min-height: 15rem;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.28s var(--ease), transform 0.28s var(--ease);
+}
 .quiz-step[hidden] { display: none; }
+.quiz-step.is-out {
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+}
 .quiz-step.is-in {
-  animation: quizIn 0.38s var(--ease);
+  animation: quizIn 0.42s var(--ease);
 }
 @keyframes quizIn {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .quiz-step.is-in { animation: none; }
+  .quiz-step, .quiz-step.is-in, .quiz-step.is-out { animation: none; transition: none; }
 }
 .quiz-step legend {
   font-family: var(--display);
@@ -843,6 +855,7 @@ section { scroll-margin-top: 6rem; }
   grid-auto-rows: 1fr;
   align-items: stretch;
 }
+.opts--stack { grid-template-columns: 1fr; }
 .opt {
   position: relative;
   cursor: pointer;
@@ -850,6 +863,7 @@ section { scroll-margin-top: 6rem; }
   height: 100%;
   min-height: 0;
 }
+.opt--wide { grid-column: 1 / -1; }
 .opt input { position: absolute; opacity: 0; pointer-events: none; }
 .opt span {
   display: flex;

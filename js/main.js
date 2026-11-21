@@ -76,7 +76,6 @@
   var gate = document.getElementById("quizGate");
   var steps = document.getElementById("quizSteps");
   var done = document.getElementById("quizDone");
-  var care = document.getElementById("quizCare");
   if (!form || !gate || !steps || !done) return;
 
   var fieldsets = steps.querySelectorAll(".quiz-step");
@@ -89,19 +88,11 @@
   var current = 0;
   var firstName = "";
   var unlocked = false;
-
+  var transitioning = false;
   var advanceTimer = 0;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function show(i) {
-    current = i;
-    fieldsets.forEach(function (fs, n) {
-      fs.hidden = n !== i;
-      fs.classList.remove("is-in");
-      if (n === i) {
-        void fs.offsetWidth;
-        fs.classList.add("is-in");
-      }
-    });
+  function syncChrome(i) {
     count.textContent = "Question " + (i + 1) + " of " + fieldsets.length;
     bar.style.width = ((i + 1) / fieldsets.length) * 100 + "%";
     back.disabled = i === 0;
@@ -109,9 +100,34 @@
     stepError.textContent = "";
   }
 
-  function finishCare() {
-    form.hidden = true;
-    if (care) care.hidden = false;
+  function paint(i) {
+    current = i;
+    fieldsets.forEach(function (fs, n) {
+      fs.hidden = n !== i;
+      fs.classList.remove("is-in", "is-out");
+      if (n === i) {
+        void fs.offsetWidth;
+        fs.classList.add("is-in");
+      }
+    });
+    syncChrome(i);
+    transitioning = false;
+  }
+
+  function goTo(i) {
+    if (transitioning || i === current || i < 0 || i >= fieldsets.length) return;
+    clearTimeout(advanceTimer);
+    if (reduceMotion) {
+      paint(i);
+      return;
+    }
+    transitioning = true;
+    var from = fieldsets[current];
+    from.classList.remove("is-in");
+    from.classList.add("is-out");
+    setTimeout(function () {
+      paint(i);
+    }, 220);
   }
 
   function finishDone() {
@@ -121,19 +137,14 @@
   }
 
   function goNext() {
-    if (!unlocked) return;
+    if (!unlocked || transitioning) return;
     var fs = fieldsets[current];
     if (fs.hasAttribute("data-required") && !fs.querySelector("input:checked")) {
       stepError.textContent = "Pick at least one to keep going.";
       return;
     }
-    var safety = fs.querySelector('[name="safety"]:checked');
-    if (fs.hasAttribute("data-safety") && safety && safety.value === "yes") {
-      finishCare();
-      return;
-    }
     if (current < fieldsets.length - 1) {
-      show(current + 1);
+      goTo(current + 1);
       return;
     }
     finishDone();
@@ -149,7 +160,7 @@
     startError.textContent = "";
     gate.hidden = true;
     steps.hidden = false;
-    show(0);
+    paint(0);
     return true;
   }
 
@@ -165,7 +176,7 @@
 
   back.addEventListener("click", function () {
     clearTimeout(advanceTimer);
-    if (current > 0) show(current - 1);
+    if (current > 0) goTo(current - 1);
   });
 
   // Single-choice questions advance automatically for a smoother flow.
@@ -174,6 +185,6 @@
     if (!input || input.type !== "radio") return;
     clearTimeout(advanceTimer);
     stepError.textContent = "";
-    advanceTimer = setTimeout(goNext, 280);
+    advanceTimer = setTimeout(goNext, 320);
   });
 })();
