@@ -363,13 +363,16 @@ section { scroll-margin-top: 6rem; }
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
-/* Home hero: logo lettering at larger scale */
+/* Home hero: logo lettering, one line */
 .hero:not(.page-hero) .h1 {
-  font-size: clamp(2.1rem, 4.4vw, 3.55rem);
+  font-size: clamp(1.85rem, 3.8vw, 3.15rem);
   max-width: none;
+  white-space: nowrap;
 }
 .hero:not(.page-hero) .h1 .tone {
-  font-size: 1.48em;
+  display: inline;
+  margin-top: 0;
+  font-size: 1em;
   white-space: nowrap;
 }
 .page-hero .h1,
@@ -1334,11 +1337,14 @@ section { scroll-margin-top: 6rem; }
     line-height: 0.98;
   }
   .hero:not(.page-hero) .h1 {
-    font-size: clamp(1.75rem, 7.5vw, 2.55rem);
+    font-size: clamp(1.35rem, 6.2vw, 2.1rem);
     line-height: 0.94;
+    white-space: nowrap;
   }
   .hero:not(.page-hero) .h1 .tone {
-    font-size: 1.32em;
+    display: inline;
+    margin-top: 0;
+    font-size: 1em;
     white-space: nowrap;
     max-width: none;
   }
