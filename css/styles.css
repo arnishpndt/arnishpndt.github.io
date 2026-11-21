@@ -189,9 +189,11 @@ section { scroll-margin-top: 6rem; }
   white-space: nowrap;
 }
 .brand-sub {
-  font-size: 0.9rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   color: var(--silver);
   white-space: nowrap;
 }
@@ -244,7 +246,7 @@ section { scroll-margin-top: 6rem; }
   .brand { gap: 0.4rem; }
   .brand-mark { height: 2.2rem; }
   .brand-answer { font-size: 0.88rem; }
-  .brand-sub { font-size: 0.78rem; }
+  .brand-sub { font-size: 0.62rem; letter-spacing: 0.14em; }
   .nav-btn { padding: 0.5rem 0.35rem; font-size: 0.85rem; }
   .head-actions .btn--small { padding: 0.6rem 0.85rem; font-size: 0.8rem; }
   .cta-long { display: none; }
