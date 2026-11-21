@@ -346,7 +346,37 @@ section { scroll-margin-top: 6rem; }
 }
 .portrait-tag strong { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.06em; }
 .hero .portrait { max-width: 28rem; justify-self: end; width: 100%; }
-@media (max-width: 959px) { .hero .portrait { display: none; } }
+@media (max-width: 959px) {
+  .hero-grid {
+    justify-items: center;
+    text-align: center;
+  }
+  .hero-grid > div {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+  }
+  .hero .portrait {
+    display: block;
+    order: -1;
+    max-width: 17rem;
+    width: min(100%, 17rem);
+    justify-self: center;
+    margin: 0 auto 0.25rem;
+  }
+  .hero-sub {
+    margin-inline: auto;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-note {
+    text-align: center;
+  }
+  .hero-eyebrow {
+    text-align: center;
+  }
+}
 
 /* ---------- Validation card ---------- */
 
