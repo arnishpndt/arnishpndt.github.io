@@ -20,7 +20,7 @@
 
   --wrap: 1360px;
   --pad: clamp(1.1rem, 4vw, 2rem);
-  --sec: clamp(3.25rem, 6vw, 5rem);
+  --sec: clamp(2rem, 4vw, 3.15rem);
   --r: 12px;
   --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
 }
@@ -312,7 +312,7 @@ section { scroll-margin-top: 6rem; }
 
 /* ---------- Hero ---------- */
 
-.hero { padding: 5.8rem var(--pad) 0; }
+.hero { padding: 5.4rem var(--pad) 0; }
 .hero-card {
   position: relative;
   overflow: hidden;
@@ -323,7 +323,7 @@ section { scroll-margin-top: 6rem; }
   border: 1px solid var(--line);
   background: #fff;
   border: 0;
-  padding: clamp(3rem, 6.5vw, 5.5rem) clamp(1.6rem, 5.5vw, 5rem) clamp(2.75rem, 5vw, 4.5rem);
+  padding: clamp(2.1rem, 4.5vw, 3.75rem) clamp(1.4rem, 5vw, 4.5rem) clamp(1.85rem, 3.5vw, 3rem);
 }
 .hero-card::before {
   content: "";
@@ -340,14 +340,14 @@ section { scroll-margin-top: 6rem; }
   max-width: var(--wrap);
   margin-inline: auto;
   display: grid;
-  gap: clamp(2.75rem, 6vw, 5.5rem);
+  gap: clamp(1.75rem, 4vw, 3.25rem);
   align-items: center;
 }
 @media (min-width: 960px) {
   .hero-grid {
     grid-template-columns: minmax(0, 1.35fr) minmax(20rem, 0.9fr);
     align-items: center;
-    gap: clamp(2.5rem, 5vw, 4.5rem);
+    gap: clamp(1.75rem, 4vw, 3.25rem);
   }
 }
 
@@ -356,7 +356,7 @@ section { scroll-margin-top: 6rem; }
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: 1.35rem;
+  margin-bottom: 0.85rem;
   background: var(--logo-gold);
   -webkit-background-clip: text;
   background-clip: text;
@@ -390,7 +390,7 @@ section { scroll-margin-top: 6rem; }
 }
 .hero-sub {
   max-width: 46ch;
-  margin: 1.75rem 0 2.15rem;
+  margin: 1.15rem 0 1.4rem;
   font-size: clamp(1.05rem, 1.5vw, 1.2rem);
   line-height: 1.65;
   color: var(--text);
@@ -398,7 +398,7 @@ section { scroll-margin-top: 6rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .hero .micro { color: var(--muted); }
 .hero-note {
-  margin-top: 1.35rem;
+  margin-top: 0.9rem;
   font-size: 0.95rem;
   font-weight: 500;
   line-height: 1.45;
@@ -473,15 +473,15 @@ section { scroll-margin-top: 6rem; }
 
 /* ---------- Validation card ---------- */
 
-.validate { position: relative; z-index: 2; margin-top: clamp(1.75rem, 4vw, 3rem); }
+.validate { position: relative; z-index: 2; margin-top: clamp(1rem, 2.5vw, 1.75rem); }
 .v-card {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--r);
   box-shadow: 0 30px 60px -45px rgba(0, 0, 0, 0.3);
-  padding: clamp(1.8rem, 4vw, 3.2rem);
+  padding: clamp(1.35rem, 3vw, 2.25rem);
   display: grid;
-  gap: clamp(1.5rem, 4vw, 3.5rem);
+  gap: clamp(1.15rem, 3vw, 2.25rem);
 }
 @media (min-width: 900px) { .v-card { grid-template-columns: 1.1fr 0.9fr; align-items: center; } }
 .v-card p {
@@ -517,10 +517,10 @@ section { scroll-margin-top: 6rem; }
 /* ---------- Generic section ---------- */
 
 .section { padding-block: var(--sec); }
-.section + .section { padding-top: clamp(2rem, 4vw, 3.25rem); }
+.section + .section { padding-top: clamp(1.25rem, 2.5vw, 2rem); }
 .section + .section--rule { padding-top: 0; }
-.section-head { margin-bottom: clamp(1.75rem, 4vw, 2.6rem); }
-.section-cta { margin-top: clamp(1.75rem, 4vw, 2.6rem); display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.section-head { margin-bottom: clamp(1.1rem, 2.5vw, 1.75rem); }
+.section-cta { margin-top: clamp(1.1rem, 2.5vw, 1.75rem); display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
 .center .section-cta, .section-cta.center { justify-content: center; }
 .break-rule {
   width: 100%;
@@ -548,7 +548,7 @@ section { scroll-margin-top: 6rem; }
 
 .section--tint { background: var(--tint); }
 .section--rule { padding-top: 0; }
-.section--rule > .wrap::before { content: ""; display: block; height: 1px; background: var(--line); margin-bottom: var(--sec); }
+.section--rule > .wrap::before { content: ""; display: block; height: 1px; background: var(--line); margin-bottom: clamp(1.5rem, 3vw, 2.35rem); }
 
 .section--dark, .dark-card--ink { background: var(--bg); color: var(--soft); }
 :is(.section--dark, .dark-card--ink) .btn--dark { background: var(--gold); color: #fff; }
@@ -575,7 +575,7 @@ section { scroll-margin-top: 6rem; }
 .cta-grid { display: grid; gap: 1.5rem 4rem; }
 .cta-grid .lead { margin-top: 0; }
 @media (min-width: 900px) { .cta-grid { grid-template-columns: 1.1fr 0.9fr; align-items: end; } }
-.book-top { padding-top: 5.6rem; }
+.book-top { padding-top: 5.2rem; }
 
 .explore-grid { display: grid; gap: 1rem; }
 @media (min-width: 900px) { .explore-grid { grid-template-columns: repeat(3, 1fr); } }
@@ -628,10 +628,10 @@ section { scroll-margin-top: 6rem; }
 .steps-grid { display: grid; gap: 1rem; }
 @media (min-width: 860px) { .steps-grid { grid-template-columns: repeat(3, 1fr); gap: clamp(1.5rem, 3vw, 3rem); } }
 #how {
-  padding-bottom: clamp(2.4rem, 4.5vw, 3.5rem);
+  padding-bottom: clamp(1.5rem, 3vw, 2.25rem);
 }
 #how + #outcome {
-  padding-top: clamp(1.6rem, 3.2vw, 2.6rem);
+  padding-top: clamp(1rem, 2.2vw, 1.65rem);
 }
 .step { border-top: 1px solid var(--ink); padding-top: 1.6rem; }
 .step-num {
@@ -680,7 +680,7 @@ section { scroll-margin-top: 6rem; }
 .outcome-grid { display: grid; gap: 1rem; }
 @media (min-width: 640px) { .outcome-grid { grid-template-columns: 1fr 1fr; gap: 0 clamp(1.5rem, 3vw, 3rem); } }
 @media (min-width: 980px) { .outcome-grid { grid-template-columns: repeat(3, 1fr); } }
-.tile { border-top: 1px solid var(--line); padding: 1.6rem 0 2rem; }
+.tile { border-top: 1px solid var(--line); padding: 1.15rem 0 1.35rem; }
 .tile-num {
   display: block;
   font-family: var(--display);
@@ -1091,25 +1091,25 @@ section { scroll-margin-top: 6rem; }
 
 /* ---------- Page hero (sub pages) ---------- */
 
-.page-hero .hero-card { padding-bottom: clamp(2rem, 5vw, 3.25rem); }
+.page-hero .hero-card { padding-bottom: clamp(1.35rem, 3vw, 2.15rem); }
 .page-hero .hero-sub { max-width: 52ch; }
 
 /* ---------- My story ---------- */
 
 .story-page {
-  padding: 5.6rem var(--pad) clamp(3rem, 6vw, 4.5rem);
+  padding: 5.2rem var(--pad) clamp(2rem, 4vw, 3rem);
 }
 .story-layout {
   max-width: var(--wrap);
   margin-inline: auto;
   display: grid;
-  gap: clamp(1.75rem, 4vw, 3rem);
+  gap: clamp(1.25rem, 3vw, 2.25rem);
   align-items: start;
 }
 @media (min-width: 900px) {
   .story-layout {
     grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.7fr);
-    gap: clamp(2.5rem, 5vw, 4rem);
+    gap: clamp(1.75rem, 4vw, 3rem);
   }
 }
 .story-main {
